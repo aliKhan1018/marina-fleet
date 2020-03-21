@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
     <script defer src="./js/main.js"></script>
 </head>
 
@@ -18,13 +17,21 @@
                         <div class="menu-icon"><img src="./imgs/icons/icons8-menu-16.png" width="100%" height="100%"
                                 alt="">
                         </div>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Ships</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Ships</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li><a href="#">Yachts</a></li>
+                                    <li><a href="#">Sailing</a></li>
+                                    <li><a href="#">Fishing</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">About</a></li>
                     </ul>
                 </div>
-                <div id="logo"></div>
+                <a href="index.html"><div id="logo"></div></a>
                 <div class="info">
                     <ul>
                         <div class="enq-icon"><img src="./imgs/icons/icons8-speech-bubble-50.png" width="25" height="25"
@@ -41,8 +48,16 @@
                         <div class="menu-icon"><img src="./imgs/icons/icons8-menu-16.png" width="100%" height="100%"
                                 alt="">
                         </div>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Ships</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Ships</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li><a href="#">Yachts</a></li>
+                                    <li><a href="#">Sailing</a></li>
+                                    <li><a href="#">Fishing</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">About</a></li>
                     </ul>
@@ -56,12 +71,12 @@
                 </div>
             </nav>
             <header>
-                <video src="./vids/Pexels Videos 2257002.mp4" id="vid" autoplay muted loop></video>
+                <video src="./vids/1477677945.mp4" id="vid" autoplay muted loop></video>
                 <div class="box">
                     <h1>Marina Fleet</h1>
                     <h2>Discover the difference.</h2>
-                    <a href="#1">
-                        <div class="down-icon"><img src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
+                    <a href="#">
+                        <div class="down-icon down" onclick="scrollDown(681 * 1)"><img src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
                     </a>
                 </div>
             </header>
@@ -80,8 +95,8 @@
                 <h4>Yacht Charter</h4>
                 <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20" alt="">
                 </div>
-                <a href="#2">
-                    <div class="down-btn"><img src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
+                <a href="#">
+                    <div class="down-btn down" onclick="scrollDown(1300)"><img src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
                 </a>
             </div>
             <div class="section-img">
@@ -108,8 +123,8 @@
                 <h4>Buy a Yacht</h4>
                 <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20" alt="">
                 </div>
-                <a href="#3">
-                    <div class="down-btn"><img src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
+                <a href="#">
+                    <div class="down-btn down" onclick="scrollDown(681 * 3)"><img src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
                 </a>
             </div>
         </section>
@@ -124,8 +139,8 @@
                 <h4>Sell a Yacht</h4>
                 <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20" alt="">
                 </div>
-                <a href="#4">
-                    <div class="down-btn"><img src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
+                <a href="#">
+                    <div class="down-btn down" onclick="scrollDown(681 * 4)"><img src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
                 </a>
             </div>
             <div class="section-img">

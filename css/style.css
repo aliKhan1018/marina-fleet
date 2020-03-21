@@ -7,6 +7,8 @@
 :root{
     --theme-color1: rgb(2, 199, 199);
     --theme-color1-hover: rgb(0, 129, 129);
+    --theme-box-shadow: rgb(170, 170, 170, 0.4);
+    --dropdown-box-shadow: rgba(85, 85, 85, 0.63);
 }
 
 *
@@ -45,7 +47,7 @@ video{
     top: -10vh;
     transition: top .3s;
     z-index: 1000;
-    box-shadow: 0 2px 3px rgb(170, 170, 170, 0.4);
+    box-shadow: 0 2px 3px var(--theme-box-shadow);
 }
 
 .header-sec{
@@ -54,6 +56,9 @@ video{
     width: 100%;
     
     overflow: hidden;
+}
+.header-sec video{
+    height: 118%;
 }
 header{
     display: flex;
@@ -79,6 +84,9 @@ nav{
 }
 #nav .menu-icon, #nav .enq-icon{
     filter: none;
+}
+#nav .dropdown ul li:hover a{
+    color: white;
 }
 .nav-links{
     float: left;
@@ -115,14 +123,56 @@ nav ul li{
     margin: 10px;
     padding: 10px 20px;
     cursor: pointer;
-}
-nav ul li::after, nav ul li::before{
-    content: '';
-    display: block;
     position: relative;
-    height: 2px;
-    width: 0;
+}
+
+nav ul li:hover .dropdown{
+    opacity: 1;
+    pointer-events: all;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown{
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
+    left: 150%;
+    box-shadow: 0 0 10px var(--dropdown-box-shadow);
+    width: 200px;
+    height: 300px;
     background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s ease-in-out;   
+}
+
+.dropdown ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.dropdown ul li{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    transition: background-color .15s ease-in-out;
+}
+.dropdown ul li:hover{
+    background-color: var(--theme-color1-hover);
+}
+.dropdown ul li:hover a{
+    color:white;
+}
+.dropdown ul li a{
+    color: var(--theme-color1-hover);
 }
 
 nav ul li a{
@@ -162,11 +212,7 @@ nav ul li a{
     filter: invert();
     top: 70px;
 }
-.menu-icon{
-    height: 20px;
-    width: 25px;
-    filter: invert();
-}
+
 div[class*='-icon']{
     cursor: pointer;
 }
