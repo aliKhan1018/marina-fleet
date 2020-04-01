@@ -1,0 +1,94 @@
+@import 'fonts', 'variables', 'mixins', 'fixed-navbar';
+
+.contact{
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+    @include flex-center();
+    flex-direction: column;
+    .text{
+        background-color: white;
+        @include flex-center();
+        flex-direction: column;
+        width: 60%;
+        h1{
+            font-size: 3em;
+            margin: 40px;
+        }
+        p{
+            font-size: 1em;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    }
+    .form{
+        width: 100%;
+        background-color: rgb(240, 240, 240);
+        form{
+            padding: 2em 1em;
+            margin: 0 auto;
+            width: 650px;
+            h3{
+                margin: 40px 0 10px 0;
+                font-size: 1.4em;
+            }
+            p{
+                font-size: .9em;
+                a{
+                    color: $theme-color1;
+                    &:hover{
+                        color: $theme-color1-hover;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            input, select, textarea{
+                border: none;
+                outline: none;
+                padding: 15px;
+                &::placeholder{
+                    font-size: 1.2em;
+                }
+            }
+            textarea{
+                resize: none;
+                margin-top: 10px;
+            }
+            .form-name{
+                width: 300px;
+                margin: 10px 0;
+            }
+            input[type=email]{
+                width: 605px;
+                margin-bottom: 10px;
+            }
+            .form-contact{
+                width: 605px;
+            }
+            .gray-box{
+                width: 605px;
+                background-color: rgb(226, 226, 226);
+                padding: 10px;
+                margin-bottom: 10px;
+                font-size: .8em;
+            }
+
+            input[type=submit]{
+                padding: 10px 20px;
+                background-color: $theme-color1;
+                color: white;
+                font-weight: bold;
+                font-size: 1.3em;
+                text-align: left;
+                width: 605px;
+                cursor: pointer;
+                margin: 20px 0;
+                &:hover{
+                    text-decoration: underline;
+                    background-color: $theme-color1-hover;
+                }
+            }
+            
+        }
+    }
+}

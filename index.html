@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,63 +11,50 @@
 
 <body>
     <div id="root">
-        <div class="navbar" id="nav">
+        <div class="d-navbar" id="nav">
             <nav>
+                <a href="index.html">
+                    <div id="logo"></div>
+                </a>
                 <div class="nav-links">
                     <ul>
-                        <div class="menu-icon"><img src="./imgs/icons/icons8-menu-16.png" width="100%" height="100%"
-                                alt="">
-                        </div>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Ships</a>
+                        <li class="nav-link"><a href="index.html">Home</a></li>
+                        <li class="nav-link"><a href="ships.html">Ships</a>
                             <div class="dropdown">
                                 <ul>
-                                    <li><a href="#">Yachts</a></li>
-                                    <li><a href="#">Sailing</a></li>
-                                    <li><a href="#">Fishing</a></li>
+                                    <li><a href="yachts.html">Yachts</a></li>
+                                    <li><a href="sailing-boats.html">Sailing</a></li>
+                                    <li><a href="fishing-boats.html">Fishing</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
+                        <li class="nav-link"><a href="gallery.html">Gallery</a></li>
+                        <li class="nav-link"><a href="sitemap.html">Sitemap</a></li>
+                        <li class="nav-link"><a href="about.html">About</a></li>
+                        <li class="nav-link"><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <a href="index.html"><div id="logo"></div></a>
-                <div class="info">
-                    <ul>
-                        <div class="enq-icon"><img src="./imgs/icons/icons8-speech-bubble-50.png" width="25" height="25"
-                                alt=""></div>
-                        <li><a href="#">Enquire</a></li>
-                    </ul>
-                </div>
+
             </nav>
         </div>
         <section class="header-sec" id="0">
             <nav>
                 <div class="nav-links">
                     <ul>
-                        <div class="menu-icon"><img src="./imgs/icons/icons8-menu-16.png" width="100%" height="100%"
-                                alt="">
-                        </div>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Ships</a>
+                        <li><a href="ships.html">Ships</a>
                             <div class="dropdown">
                                 <ul>
-                                    <li><a href="#">Yachts</a></li>
-                                    <li><a href="#">Sailing</a></li>
-                                    <li><a href="#">Fishing</a></li>
+                                    <li><a href="yachts.html">Yachts</a></li>
+                                    <li><a href="sailing-boats.html">Sailing</a></li>
+                                    <li><a href="fishing-boats.html">Fishing</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
-                </div>
-                <div class="info">
-                    <ul>
-                        <div class="enq-icon"><img src="./imgs/icons/icons8-speech-bubble-50.png" width="25" height="25"
-                                alt=""></div>
-                        <li><a href="#">Enquire</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -75,9 +63,8 @@
                 <div class="box">
                     <h1>Marina Fleet</h1>
                     <h2>Discover the difference.</h2>
-                    <a href="#">
-                        <div class="down-icon down" onclick="scrollDown(681 * 1)"><img src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
-                    </a>
+                    <div class="down-icon down" onclick="scrollDown(1)"><img
+                            src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
                 </div>
             </header>
         </section>
@@ -85,22 +72,24 @@
 
         <section class="charter-sec" id="1">
             <div class="info-box">
-                <h3>Charter a yacht</h3>
+                <h3>Buy a yacht</h3>
                 <h2>Your great escape. <br>
                     Tailored by Us.</h2>
                 <p>Cruise in inimitable style and experience real <br> freedom. The adventure of a lifetime awaits
                     aboard <br> the
-                    world’s greatest superyachts, all curated by <br> your own professional broker.</p>
+                    world’s greatest superyachts.</p>
 
-                <h4>Yacht Charter</h4>
-                <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20" alt="">
-                </div>
-                <a href="#">
-                    <div class="down-btn down" onclick="scrollDown(1300)"><img src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
+                <a href="./yachts.html">
+                    <h4>Yachts</h4>
+                    <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20"
+                            alt="">
+                    </div>
                 </a>
+                <div class="down-btn down" onclick="scrollDown(2)"><img src="./imgs/icons/icons8-expand-arrow-24.png"
+                        alt=""></div>
             </div>
             <div class="section-img">
-                <img src="./imgs/luke-bender-h_YjxPtkRHA-unsplash (1).jpg" height="110%" width="100%" alt="">
+                <img src="./imgs/nikldn-t-6GW8T6Jsc-unsplash.jpg" height="170%" width="100%" alt="">
                 <div class="box">
                     <h1>Unforgettable.</h1>
                 </div>
@@ -109,13 +98,13 @@
 
         <section class="buy-sec" id="2">
             <div class="section-img">
-                <img src="./imgs/ben-koorengevel-rpMwfGLSsd8-unsplash.jpg" height="110%" width="100%" alt="">
+                <img src="./imgs/armand-khoury-4qr3dUPTpOc-unsplash.jpg" height="240%" style="margin-top: -180px;" width="100%" alt="">
                 <div class="box">
                     <h1>Escape.</h1>
                 </div>
             </div>
             <div class="info-box">
-                <h3>Buy a yacht</h3>
+                <h3>Buy a sailing boat</h3>
                 <h2>Your life. Spent wisely.</h2>
                 <p>From the global fleet of yachts offered for sale, we <br> hand-pick the best opportunities and share
                     our expert <br> knowledge, so that you can make the best decisions.</p>
@@ -123,9 +112,8 @@
                 <h4>Buy a Yacht</h4>
                 <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20" alt="">
                 </div>
-                <a href="#">
-                    <div class="down-btn down" onclick="scrollDown(681 * 3)"><img src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
-                </a>
+                <div class="down-btn down" onclick="scrollDown(3)"><img src="./imgs/icons/icons8-expand-arrow-24.png"
+                        alt=""></div>
             </div>
         </section>
 
@@ -139,9 +127,8 @@
                 <h4>Sell a Yacht</h4>
                 <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20" alt="">
                 </div>
-                <a href="#">
-                    <div class="down-btn down" onclick="scrollDown(681 * 4)"><img src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
-                </a>
+                <div class="down-btn down" onclick="scrollDown(4)"><img src="./imgs/icons/icons8-expand-arrow-24.png"
+                        alt=""></div>
             </div>
             <div class="section-img">
                 <img src="./imgs/eric-ward-R4lFk-d37ng-unsplash.jpg" height="110%" width="100%" alt="">
@@ -153,7 +140,10 @@
 
         <section class="newsletter">
             <h1>Sign up to our newsletter</h1>
-            <input type="email" placeholder="Enter your email address">
+            <form>
+                <input type="email" placeholder="Enter your email address" id="email">
+                <input type="submit" value="" id="submit">
+            </form>
         </section>
 
         <footer>
@@ -165,17 +155,21 @@
                 <div style="color: rgb(175, 175, 175);">© 2020</div>
             </div>
             <div id="right">
-                <a href="https://facebook.com"  target="_blank"><img src="./imgs/icons/social-media/icons8-facebook-30.png" alt=""></a>
-                <a href="https://instagram.com" target="_blank"><img src="./imgs/icons/social-media/icons8-instagram-30.png" alt=""></a>
-                <a href="https://youtube.com"   target="_blank"><img src="./imgs/icons/social-media/icons8-play-button-30.png" alt=""></a>
-                <a href="https://twitter.com"   target="_blank"><img src="./imgs/icons/social-media/icons8-twitter-30.png" alt=""></a>
+                <a href="https://facebook.com" target="_blank"><img
+                        src="./imgs/icons/social-media/icons8-facebook-30.png" alt=""></a>
+                <a href="https://instagram.com" target="_blank"><img
+                        src="./imgs/icons/social-media/icons8-instagram-30.png" alt=""></a>
+                <a href="https://youtube.com" target="_blank"><img
+                        src="./imgs/icons/social-media/icons8-play-button-30.png" alt=""></a>
+                <a href="https://twitter.com" target="_blank"><img src="./imgs/icons/social-media/icons8-twitter-30.png"
+                        alt=""></a>
             </div>
         </footer>
 
 
 
     </div>
-    <script src="./js/app.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Spinnaker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap");
+.navbar {
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  -webkit-transition: top .5s;
+  transition: top .5s;
+  z-index: 1000;
+  -webkit-box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
+          box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
+}
+
+.navbar #logo {
+  height: 10vh;
+  width: 396px;
+  background-color: #18c0d6;
+  float: left;
+}
+
+.navbar nav ul .nav-link {
+  margin-left: 30px;
+}
+
+.navbar nav ul li a {
+  color: black;
+}
+
+.navbar .menu-icon {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.navbar .enq-icon img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.navbar .dropdown ul li:hover a {
+  color: white;
+}
+
+.contact {
+  margin: 0 auto;
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .text {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+}
+
+.contact .text h1 {
+  font-size: 3em;
+  margin: 40px;
+}
+
+.contact .text p {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact .form {
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.contact .form form {
+  padding: 2em 1em;
+  margin: 0 auto;
+  width: 650px;
+}
+
+.contact .form form h3 {
+  margin: 40px 0 10px 0;
+  font-size: 1.4em;
+}
+
+.contact .form form p {
+  font-size: .9em;
+}
+
+.contact .form form p a {
+  color: #18c0d6;
+}
+
+.contact .form form p a:hover {
+  color: #16a8bb;
+  text-decoration: underline;
+}
+
+.contact .form form input, .contact .form form select, .contact .form form textarea {
+  border: none;
+  outline: none;
+  padding: 15px;
+}
+
+.contact .form form input::-webkit-input-placeholder, .contact .form form select::-webkit-input-placeholder, .contact .form form textarea::-webkit-input-placeholder {
+  font-size: 1.2em;
+}
+
+.contact .form form input:-ms-input-placeholder, .contact .form form select:-ms-input-placeholder, .contact .form form textarea:-ms-input-placeholder {
+  font-size: 1.2em;
+}
+
+.contact .form form input::-ms-input-placeholder, .contact .form form select::-ms-input-placeholder, .contact .form form textarea::-ms-input-placeholder {
+  font-size: 1.2em;
+}
+
+.contact .form form input::placeholder, .contact .form form select::placeholder, .contact .form form textarea::placeholder {
+  font-size: 1.2em;
+}
+
+.contact .form form textarea {
+  resize: none;
+  margin-top: 10px;
+}
+
+.contact .form form .form-name {
+  width: 300px;
+  margin: 10px 0;
+}
+
+.contact .form form input[type=email] {
+  width: 605px;
+  margin-bottom: 10px;
+}
+
+.contact .form form .form-contact {
+  width: 605px;
+}
+
+.contact .form form .gray-box {
+  width: 605px;
+  background-color: #e2e2e2;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: .8em;
+}
+
+.contact .form form input[type=submit] {
+  padding: 10px 20px;
+  background-color: #18c0d6;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: left;
+  width: 605px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.contact .form form input[type=submit]:hover {
+  text-decoration: underline;
+  background-color: #16a8bb;
+}
+/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Spinnaker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap");
+.navbar {
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  -webkit-transition: top .5s;
+  transition: top .5s;
+  z-index: 1000;
+  -webkit-box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
+          box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
+}
+
+.navbar #logo {
+  height: 10vh;
+  width: 396px;
+  background-color: #18c0d6;
+  float: left;
+}
+
+.navbar nav ul .nav-link {
+  margin-left: 30px;
+}
+
+.navbar nav ul li a {
+  color: black;
+}
+
+.navbar .menu-icon {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.navbar .enq-icon img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.navbar .dropdown ul li:hover a {
+  color: white;
+}
+
+.search {
+  background-color: #111b24;
+  width: 100%;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search h3 {
+  color: white;
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.search select {
+  border: none;
+  background-color: transparent;
+  color: white;
+  padding: 5px 0;
+  font-size: 1em;
+  outline: none;
+}
+
+.search select option {
+  color: black;
+}
+
+.products {
+  padding: 5em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.products .product {
+  height: 560px;
+  width: 600px;
+}
+
+.products .product .product-img {
+  height: 400px;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: gray;
+  overflow: hidden;
+}
+
+.products .product .product-img img {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  width: 100%;
+}
+
+.products .product .product-img img:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.products .product .product-info {
+  height: 200px;
+  width: 100%;
+  color: black;
+}
+
+.products .product .product-info h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.products .product .product-info .price {
+  font-size: 1.2em;
+}
+
+.products .product .product-info .info {
+  font-size: 1em;
+}
+
+.abc {
+  width: 96%;
+  height: 800px;
+  margin: 0 auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(155, 243, 255, 0.452)), color-stop(rgba(86, 210, 226, 0.171)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(rgba(155, 243, 255, 0.452), rgba(86, 210, 226, 0.171), rgba(0, 0, 0, 0));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.abc p {
+  font-size: 1.1em;
+}
+
+.abc h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5em;
+  letter-spacing: 3px;
+}
+
+.abc h1::after {
+  content: '';
+  display: block;
+  background-color: #18c0d6;
+  height: 10px;
+  width: 15%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 20px 0;
+  margin-left: 50%;
+}
+
+.abc .info {
+  width: 800px;
+  text-align: center;
+  font-size: 1.4em;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.abc .cards {
+  width: 100%;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.abc .cards .card {
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+  padding: 1em;
+}
+
+.abc .cards .card h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.abc .cards .card p {
+  font-family: 'Playfair Display', serif;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1em;
+}
+/*# sourceMappingURL=ships.css.map */

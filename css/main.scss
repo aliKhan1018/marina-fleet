@@ -1,6 +1,4 @@
-@import 'variables', 'mixins';
-
-
+@import 'variables', 'mixins', 'fonts';
 
 .box{
     border: 3px solid white;
@@ -20,16 +18,17 @@
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, a{
-    /* font-family: 'Sen', sans-serif; */
+h1, h2, h3, h4, h5, h6, a, p{
+    // font-family: 'Sen', sans-serif; 
     font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Spinnaker', sans-serif; */
-    /* font-family: 'Nunito Sans', sans-serif; */
+    // font-family: 'Spinnaker', sans-serif;
+    // font-family: 'Nunito Sans', sans-serif;
 }
 
 video{
     position: absolute;
     z-index: -1;
+    width: 100%;
 }
 
 #root{
@@ -37,28 +36,37 @@ video{
     height: auto;
 }
 
-.navbar{
+.d-navbar{
     width: 100%;
     height: 10vh;
     background-color: white;
     position: fixed;
-    top: -10vh;
-    transition: top .3s;
+    top: -20vh;
+    transition: top .5s;
     z-index: 1000;
-    box-shadow: 0 2px 3px $theme-box-shadow;
+    box-shadow: 0 2px 8px $theme-box-shadow;
     #logo{
         height: 10vh;
-        width: 300px;
+        width: 396px;
         background-color: $theme-color1;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        float: left;
+        // position: absolute;
+        // left: 50%;
+        // transform: translateX(-50%);
+    }
+    nav ul .nav-link{
+        margin-left: 30px;
     }
     nav ul li a{
         color: black;
     }
-    .menu-icon, .enq-icon{
+    .menu-icon{
         filter: none;
+    }
+    .enq-icon{
+        img{
+        filter:invert(100%);
+        }
     }
     .dropdown ul li:hover a{
         color: white;
@@ -73,12 +81,11 @@ video{
     overflow: hidden;
     video{
         width: 100%;
-        height: 118%;
     }
     .menu-icon{
         height: 20px;
         width: 25px;
-        filter: invert(black, 100%);
+        filter: invert(100%);
     }
     .box{
         @extend .box;
@@ -98,7 +105,7 @@ video{
             position: relative;
             height: 24px;
             width: 24px;
-            // filter: invert(black);
+            filter: invert(100%);
             top: 70px;
         }
         
@@ -109,29 +116,37 @@ header{
     @include flex-center();
 }
 
-nav{
+nav
+{
     height: 10vh;
     width: 90%;
     margin-left: 5%;
-    .nav-links{
+    .nav-links
+    {
         float: left;
         width: 50%;
         height: 100%;
-        
+        .menu-icon{
+            height: 20px;
+            width: 20px;
+        }
     }
-    ul {
+    ul 
+    {
         width: 100%;
         height: 100%;
         list-style: none;
         display: flex;
         justify-content: left;
         align-items: center;
-        li{
-            margin: 10px;
-            padding: 10px 20px;
+        li
+        {
+            margin-right: 40px;
+            padding: 10px 0px;
             cursor: pointer;
             position: relative;
-            &::after{
+            &::after
+            {
                 content: '';
                 display: block;
                 position: relative;
@@ -143,14 +158,17 @@ nav{
                 transition: .2s ease-in-out;
                 
             }
-            &:hover::after{
+            &:hover::after
+            {
                 width: 100%;
             }
-            a{
+            a
+            {
                 color: white;
                 font-weight: 300;
             }
-            &:hover .dropdown{
+            &:hover .dropdown
+            {
                 opacity: 1;
                 pointer-events: all;
                 top: 100%;
@@ -169,7 +187,7 @@ nav{
             .enq-icon{
                 height: 25px;
                 width: 25px;
-                // filter: invert();
+                filter: invert(100%);
             }
             li{
                 padding: 0px;
@@ -206,7 +224,10 @@ nav{
                 content: none;
             }
             a{
+                @include flex-center();
                 color: $theme-color1-hover;
+                height: 100%;
+                width: 100%;
             }
             &:hover{
                 background-color: $theme-color1-hover;
@@ -220,6 +241,7 @@ nav{
 .charter-sec, .buy-sec, .sell-sec{
     height: 90vh;
     width: 100%;
+    position: relative;
 
 }
 @mixin ib {
@@ -272,12 +294,13 @@ nav{
     .more-icon{
         height: 20px;
         width: 20px;
-        margin-top: 51px;
-        margin-left: 20px;
+        margin-top: 50px;
+        margin-left: 10px;
         float: left;
+        filter: invert(0%);
     }
     .down-btn{
-        margin-top: 150px;
+        margin-top: 100px;
         margin-left: 50px;
         height: 50px;
         width: 50px;
@@ -296,7 +319,7 @@ nav{
         float: left;
         overflow: hidden;
         @include flex-center();
-        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,0));
+        background-image: $theme-gradient;
         img{
             position: absolute;
             z-index: -1;
@@ -319,27 +342,45 @@ nav{
     height: 30vh;
     @include flex-center();
     flex-direction: column;
-    background-color: rgb(17, 27, 36);
+    background-color: $theme-color2;
     h1{
         color: white;
         font-size: 30px;
     }
-    input[type=email]{
-        margin-top: 30px;
-        border: none;
-        background:none;
-        padding: 10px 0px;
-        color: white;
-        width: 40%;
-        border-bottom: 1px solid white;
-        font-size: 16px;
-        outline: none;
-        &::placeholder{
+    form{
+        width: 100%;
+        @include flex-center();
+        input[type=email]{
+            margin-top: 30px;
+            border: none;
+            background:none;
+            padding: 10px 0px;
             color: white;
+            width: 40%;
+            border-bottom: 1px solid white;
             font-size: 16px;
-            font-weight: normal;
+            outline: none;
+            &::placeholder{
+                color: white;
+                font-size: 16px;
+                font-weight: normal;
+            }
         }
-    }
+        input[type=submit]{
+            border: 2px solid black;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color:transparent;
+            margin-top: 15px;
+            margin-left: 40px;
+            background-image: url(../imgs/icons/icons8-more-than-50.png);
+            filter: invert(100%);
+            background-size: contain;
+            cursor: pointer;
+            outline: none;
+        }
+}
 }
 
 footer{
@@ -387,6 +428,44 @@ footer{
     }
 }
 
-div[class*='-icon']{
+div[class*='-icon'], div[class*='-btn']{
     cursor: pointer;
 }
+section[class*='-sec']{
+    overflow: hidden;
+}
+
+.intro-sec{
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    top: 10vh;
+    @include flex-center();
+    margin-bottom: 10vh;
+    background-image: $theme-gradient;
+    img{
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+    }
+    .box{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 2.5em 3em;
+        height: 70vh;
+        h1{
+            font-size: 6.5em;
+        }
+        h2{
+            font-size: 3.5em;
+            font-weight: 500;
+        }
+        h3{
+            font-size: 2em;
+            margin-top: 25vh;
+        }
+    }
+}
+

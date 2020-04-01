@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Spinnaker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap");
 .box, .header-sec .box, .charter-sec .section-img .box, .buy-sec .section-img .box, .sell-sec .section-img .box {
   border: 3px solid white;
   position: relative;
@@ -28,16 +33,14 @@
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, a {
-  /* font-family: 'Sen', sans-serif; */
+h1, h2, h3, h4, h5, h6, a, p {
   font-family: 'Montserrat', sans-serif;
-  /* font-family: 'Spinnaker', sans-serif; */
-  /* font-family: 'Nunito Sans', sans-serif; */
 }
 
 video {
   position: absolute;
   z-index: -1;
+  width: 100%;
 }
 
 #root {
@@ -45,39 +48,45 @@ video {
   height: auto;
 }
 
-.navbar {
+.d-navbar {
   width: 100%;
   height: 10vh;
   background-color: white;
   position: fixed;
-  top: -10vh;
-  -webkit-transition: top .3s;
-  transition: top .3s;
+  top: -20vh;
+  -webkit-transition: top .5s;
+  transition: top .5s;
   z-index: 1000;
-  -webkit-box-shadow: 0 2px 3px rgba(170, 170, 170, 0.4);
-          box-shadow: 0 2px 3px rgba(170, 170, 170, 0.4);
+  -webkit-box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
+          box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
 }
 
-.navbar #logo {
+.d-navbar #logo {
   height: 10vh;
-  width: 300px;
-  background-color: #02c7c7;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  width: 396px;
+  background-color: #18c0d6;
+  float: left;
 }
 
-.navbar nav ul li a {
+.d-navbar nav ul .nav-link {
+  margin-left: 30px;
+}
+
+.d-navbar nav ul li a {
   color: black;
 }
 
-.navbar .menu-icon, .navbar .enq-icon {
+.d-navbar .menu-icon {
   -webkit-filter: none;
           filter: none;
 }
 
-.navbar .dropdown ul li:hover a {
+.d-navbar .enq-icon img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.d-navbar .dropdown ul li:hover a {
   color: white;
 }
 
@@ -90,14 +99,13 @@ video {
 
 .header-sec video {
   width: 100%;
-  height: 118%;
 }
 
 .header-sec .menu-icon {
   height: 20px;
   width: 25px;
-  -webkit-filter: white;
-          filter: white;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .header-sec .box h1, .header-sec .charter-sec .section-img .box h1, .charter-sec .section-img .header-sec .box h1, .header-sec .buy-sec .section-img .box h1, .buy-sec .section-img .header-sec .box h1, .header-sec .sell-sec .section-img .box h1, .sell-sec .section-img .header-sec .box h1 {
@@ -118,6 +126,8 @@ video {
   position: relative;
   height: 24px;
   width: 24px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
   top: 70px;
 }
 
@@ -145,6 +155,11 @@ nav .nav-links {
   height: 100%;
 }
 
+nav .nav-links .menu-icon {
+  height: 20px;
+  width: 20px;
+}
+
 nav ul {
   width: 100%;
   height: 100%;
@@ -161,8 +176,8 @@ nav ul {
 }
 
 nav ul li {
-  margin: 10px;
-  padding: 10px 20px;
+  margin-right: 40px;
+  padding: 10px 0px;
   cursor: pointer;
   position: relative;
 }
@@ -218,6 +233,8 @@ nav .info ul {
 nav .info ul .enq-icon {
   height: 25px;
   width: 25px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 nav .info ul li {
@@ -281,11 +298,22 @@ nav .info ul li {
 }
 
 .dropdown ul li a {
-  color: #008181;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #16a8bb;
+  height: 100%;
+  width: 100%;
 }
 
 .dropdown ul li:hover {
-  background-color: #008181;
+  background-color: #16a8bb;
 }
 
 .dropdown ul li:hover a {
@@ -295,6 +323,7 @@ nav .info ul li {
 .charter-sec, .buy-sec, .sell-sec {
   height: 90vh;
   width: 100%;
+  position: relative;
 }
 
 .charter-sec .info-box, .buy-sec .info-box, .sell-sec .info-box {
@@ -321,7 +350,7 @@ nav .info ul li {
   display: block;
   width: 30%;
   height: 10px;
-  background-color: #02c7c7;
+  background-color: #18c0d6;
   margin-top: 20px;
 }
 
@@ -337,25 +366,27 @@ nav .info ul li {
   font-size: 18px;
   margin-left: 50px;
   margin-top: 50px;
-  color: #02c7c7;
+  color: #18c0d6;
   cursor: pointer;
   float: left;
 }
 
 .charter-sec .info-box h4:hover, .buy-sec .info-box h4:hover, .sell-sec .info-box h4:hover {
-  color: #008181;
+  color: #16a8bb;
 }
 
 .charter-sec .more-icon, .buy-sec .more-icon, .sell-sec .more-icon {
   height: 20px;
   width: 20px;
-  margin-top: 51px;
-  margin-left: 20px;
+  margin-top: 50px;
+  margin-left: 10px;
   float: left;
+  -webkit-filter: invert(0%);
+          filter: invert(0%);
 }
 
 .charter-sec .down-btn, .buy-sec .down-btn, .sell-sec .down-btn {
-  margin-top: 150px;
+  margin-top: 100px;
   margin-left: 50px;
   height: 50px;
   width: 50px;
@@ -368,14 +399,14 @@ nav .info ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid #02c7c7;
+  border: 2px solid #18c0d6;
   border-radius: 50%;
   -webkit-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
 }
 
 .charter-sec .down-btn:hover, .buy-sec .down-btn:hover, .sell-sec .down-btn:hover {
-  background-color: #02c7c7;
+  background-color: #18c0d6;
 }
 
 .charter-sec .section-img, .buy-sec .section-img, .sell-sec .section-img {
@@ -393,8 +424,8 @@ nav .info ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
 
 .charter-sec .section-img img, .buy-sec .section-img img, .sell-sec .section-img img {
@@ -442,7 +473,20 @@ nav .info ul li {
   font-size: 30px;
 }
 
-.newsletter input[type=email] {
+.newsletter form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newsletter form input[type=email] {
   margin-top: 30px;
   border: none;
   background: none;
@@ -454,28 +498,44 @@ nav .info ul li {
   outline: none;
 }
 
-.newsletter input[type=email]::-webkit-input-placeholder {
+.newsletter form input[type=email]::-webkit-input-placeholder {
   color: white;
   font-size: 16px;
   font-weight: normal;
 }
 
-.newsletter input[type=email]:-ms-input-placeholder {
+.newsletter form input[type=email]:-ms-input-placeholder {
   color: white;
   font-size: 16px;
   font-weight: normal;
 }
 
-.newsletter input[type=email]::-ms-input-placeholder {
+.newsletter form input[type=email]::-ms-input-placeholder {
   color: white;
   font-size: 16px;
   font-weight: normal;
 }
 
-.newsletter input[type=email]::placeholder {
+.newsletter form input[type=email]::placeholder {
   color: white;
   font-size: 16px;
   font-weight: normal;
+}
+
+.newsletter form input[type=submit] {
+  border: 2px solid black;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  margin-top: 15px;
+  margin-left: 40px;
+  background-image: url(../imgs/icons/icons8-more-than-50.png);
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  background-size: contain;
+  cursor: pointer;
+  outline: none;
 }
 
 footer {
@@ -514,8 +574,8 @@ footer #left a {
 }
 
 footer #left a:hover {
-  border-bottom: 1px solid #02c7c7;
-  color: #02c7c7;
+  border-bottom: 1px solid #18c0d6;
+  color: #18c0d6;
 }
 
 footer #right {
@@ -553,7 +613,68 @@ footer #right a img {
   height: 30px;
 }
 
-div[class*='-icon'] {
+div[class*='-icon'], div[class*='-btn'] {
   cursor: pointer;
+}
+
+section[class*='-sec'] {
+  overflow: hidden;
+}
+
+.intro-sec {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+
+.intro-sec img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.intro-sec .box, .intro-sec .charter-sec .section-img .box, .charter-sec .section-img .intro-sec .box, .intro-sec .buy-sec .section-img .box, .buy-sec .section-img .intro-sec .box, .intro-sec .sell-sec .section-img .box, .sell-sec .section-img .intro-sec .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2.5em 3em;
+  height: 70vh;
+}
+
+.intro-sec .box h1, .intro-sec .charter-sec .section-img .box h1, .charter-sec .section-img .intro-sec .box h1, .intro-sec .buy-sec .section-img .box h1, .buy-sec .section-img .intro-sec .box h1, .intro-sec .sell-sec .section-img .box h1, .sell-sec .section-img .intro-sec .box h1 {
+  font-size: 6.5em;
+}
+
+.intro-sec .box h2, .intro-sec .charter-sec .section-img .box h2, .charter-sec .section-img .intro-sec .box h2, .intro-sec .buy-sec .section-img .box h2, .buy-sec .section-img .intro-sec .box h2, .intro-sec .sell-sec .section-img .box h2, .sell-sec .section-img .intro-sec .box h2 {
+  font-size: 3.5em;
+  font-weight: 500;
+}
+
+.intro-sec .box h3, .intro-sec .charter-sec .section-img .box h3, .charter-sec .section-img .intro-sec .box h3, .intro-sec .buy-sec .section-img .box h3, .buy-sec .section-img .intro-sec .box h3, .intro-sec .sell-sec .section-img .box h3, .sell-sec .section-img .intro-sec .box h3 {
+  font-size: 2em;
+  margin-top: 25vh;
 }
 /*# sourceMappingURL=main.css.map */
