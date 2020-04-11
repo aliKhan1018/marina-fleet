@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Spinnaker&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap");
 .navbar {
   width: 100%;
@@ -21,6 +18,15 @@
   width: 396px;
   background-color: #18c0d6;
   float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar nav ul .nav-link {
@@ -60,23 +66,31 @@
           align-items: center;
 }
 
-.search h3 {
-  color: white;
-  margin: 10px 0;
-  font-size: 1.5em;
-}
-
-.search select {
+.search input[type=text] {
   border: none;
-  background-color: transparent;
+  background: none;
+  padding: 10px 0;
+  border-bottom: 1px solid white;
+  width: 300px;
   color: white;
-  padding: 5px 0;
-  font-size: 1em;
+  font-size: 1.2em;
   outline: none;
 }
 
-.search select option {
-  color: black;
+.search input[type=text]::-webkit-input-placeholder {
+  color: white;
+}
+
+.search input[type=text]:-ms-input-placeholder {
+  color: white;
+}
+
+.search input[type=text]::-ms-input-placeholder {
+  color: white;
+}
+
+.search input[type=text]::placeholder {
+  color: white;
 }
 
 .products {
@@ -142,7 +156,7 @@
   font-size: 1em;
 }
 
-.abc {
+.discover {
   width: 96%;
   height: 800px;
   margin: 0 auto;
@@ -163,17 +177,17 @@
           flex-direction: column;
 }
 
-.abc p {
+.discover p {
   font-size: 1.1em;
 }
 
-.abc h1 {
+.discover h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3.5em;
   letter-spacing: 3px;
 }
 
-.abc h1::after {
+.discover h1::after {
   content: '';
   display: block;
   background-color: #18c0d6;
@@ -185,7 +199,7 @@
   margin-left: 50%;
 }
 
-.abc .info {
+.discover .info {
   width: 800px;
   text-align: center;
   font-size: 1.4em;
@@ -193,7 +207,7 @@
   font-weight: 400;
 }
 
-.abc .cards {
+.discover .cards {
   width: 100%;
   padding: 1em;
   display: -webkit-box;
@@ -207,14 +221,14 @@
           align-items: center;
 }
 
-.abc .cards .card {
+.discover .cards .card {
   margin: 10px;
   height: 300px;
   width: 400px;
   padding: 1em;
 }
 
-.abc .cards .card h2 {
+.discover .cards .card h2 {
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
@@ -222,7 +236,7 @@
   font-family: 'Playfair Display', serif;
 }
 
-.abc .cards .card p {
+.discover .cards .card p {
   font-family: 'Playfair Display', serif;
   margin-top: 20px;
   text-align: center;

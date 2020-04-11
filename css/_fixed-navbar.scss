@@ -12,6 +12,8 @@
         width: 396px;
         background-color: $theme-color1;
         float: left;
+        @include flex-center();
+
     }
     nav ul .nav-link{
         margin-left: 30px;

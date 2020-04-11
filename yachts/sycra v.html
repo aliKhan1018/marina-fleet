@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,60 +7,95 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/ship.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <script defer src="../js/main.js"></script>
+
+    <style>
+        .swiper-container {
+            height: 480px;
+            width: 100%;
+            margin-top: 20px;
+            float: left;
+        }
+
+        .swiper-slide {
+            overflow: hidden;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+            -webkit-align-items: center;
+            align-items: center;
+            width: 60%;
+        }
+
+        .swiper-slide img {
+            height: 100%;
+        }
+    </style>
 </head>
+
 <body>
     <div id="root">
-        <div class="navbar" id="nav">
+        <div class="navbar">
             <nav>
-                <a href="index.html">
-                    <div id="logo"></div>
+                <a href="../index.html">
+                    <div id="logo"><img src="../imgs/logo_marina_fleet.png" alt=""></div>
                 </a>
                 <div class="nav-links">
                     <ul>
-                        <li class="nav-link"><a href="index.html">Home</a></li>
-                        <li class="nav-link"><a href="ships.html">Ships</a>
+                        <li class="nav-link"><a href="../index.html">Home</a></li>
+                        <li class="nav-link"><a href="../ships.html">Ships</a>
                             <div class="dropdown">
                                 <ul>
-                                    <li><a href="yachts.html">Yachts</a></li>
-                                    <li><a href="sailing-boats.html">Sailing</a></li>
-                                    <li><a href="fishing-boats.html">Fishing</a></li>
+                                    <li><a href="../yachts.html">Yachts</a></li>
+                                    <li><a href="../sailing-boats.html">Sailing</a></li>
+                                    <li><a href="../fishing-boats.html">Fishing</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-link"><a href="gallery.html">Gallery</a></li>
-                        <li class="nav-link"><a href="sitemap.html">Sitemap</a></li>
-                        <li class="nav-link"><a href="about.html">About</a></li>
-                        <li class="nav-link"><a href="contact.html">Contact</a></li>
+                        <li class="nav-link"><a href="../gallery.html">Gallery</a></li>
+                        <li class="nav-link"><a href="../sitemap.html">Sitemap</a></li>
+                        <li class="nav-link"><a href="../about.html">About</a></li>
+                        <li class="nav-link"><a href="../contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
 
         <section class="ship-data">
-            <div class="back-btn"></div>
-            <h1>Sycara V</h1>
-            <div class="imgs">
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
+            <a href="../yachts.html"><div class="back-btn wow fadeIn"><img src="../imgs/icons/icons8-back-24.png" alt=""></div></a>
+            <h1 class="wow fadeInRight">Sycara V</h1>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../imgs/yachts/sycara/lethantia_00006037_vb1630033.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../imgs/yachts/sycara/lethantia_00006037_vb1630036.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../imgs/yachts/sycara/sycara-v-ga (1).jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../imgs/yachts/sycara/webvb730676.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../imgs/yachts/sycara/webvb730738.jpg" alt=""></div>
+                </div>
             </div>
             <div class="infos">
-                <div class="info">
+                <div class="info wow fadeInUp" data-wow-delay=".25s">
                     <p>Asking price</p>
                     <h1>EUR 59,500,000</h1>
                 </div>
                 <div class="divider"></div>
-                <div class="info">
+                <div class="info wow fadeInUp" data-wow-delay=".5s">
                     <p>Built</p>
                     <h1> 2010 (refitted 2017), Nobiskurg, Germany</h1>
                 </div>
                 <div class="divider"></div>
-                <div class="info">
+                <div class="info wow fadeInUp" data-wow-delay=".75s">
                     <p>Length</p>
                     <h1>68.2m (223.6ft)</h1>
                 </div>
                 <div class="divider"></div>
-                <div class="info">
+                <div class="info wow fadeInUp" data-wow-delay="1s">
                     <p>Guests</p>
                     <h1>14 in 6 cabins </h1>
                 </div>
@@ -67,51 +103,54 @@
         </section>
 
         <section class="ship-info">
-            <ul class="tabs">
+            <ul class="tabs wow fadeInLeft" data-wow-offset="50">
                 <li class="tab">Description</li>
-                <li class="tab">Specification</li>
-                <li class="tab">Gallery</li>
             </ul>
             <div class="text-container">
                 <div class="left">
-                    <h1>About Sycara V</h1>
-                    <h2>SYCARA V had a focused design brief from an experienced Owner, who commissioned the Nobiskrug shipyard and designer Craig Beale to deliver a sleek, classy, and robust vessel with solid charter value. As a result of this collaboration the yacht was awarded the prestigious World Superyacht Award for 'Best Displacement Motor Yacht 60m - 84m' in 2011.</h2>
-                    <p>Exquisite accommodation is provided for up to 20 guests in eight cabins. SYCARA V has an elevator that runs from the accommodation deck up to the sun deck, and duel shell doors aft, housing a 31ft and a 23ft tender.
+                    <h1 class="wow fadeIn">About Sycara V</h1>
+                    <h2 class="wow fadeInUp">SYCARA V had a focused design brief from an experienced Owner, who commissioned the Nobiskrug
+                        shipyard and designer Craig Beale to deliver a sleek, classy, and robust vessel with solid
+                        charter value. As a result of this collaboration the yacht was awarded the prestigious World
+                        Superyacht Award for 'Best Displacement Motor Yacht 60m - 84m' in 2011.</h2>
+                    <p class="wow fadeIn">Exquisite accommodation is provided for up to 20 guests in eight cabins. SYCARA V has an elevator
+                        that runs from the accommodation deck up to the sun deck, and duel shell doors aft, housing a
+                        31ft and a 23ft tender.
                     </p>
-                    <p>SYCARA V is not available for sale to US residents while in US waters.
+                    <p class="wow fadeIn">SYCARA V is not available for sale to US residents while in US waters.
                     </p>
-                   
+                    <a style="color: gray; text-decoration: underline;" href="../docs-yachts/Sycara V.docx"
+                        download>Download as .docx</a>
+
                 </div>
                 <div class="right">
-                    <h1>Key features</h1>
-                    <h2>•	Winner of the World Superyacht Award 2011 'Best Displacement Motor Yacht 60m - 84m'</h2>
-                    <h2>•	Exterior & Interior Design by Craig Beale/Pure Detail</h2>
-                    <h2>•	Accommodation for up to 20 guests in eight cabins (master suite, 4 guest King suites; 2 have additional single beds and Pullman, and 1 twin cabin with Pullman berth)
-                    </h2>
-                    <h2>•	Twin Caterpillar 3516 HD, 2200hp engines</h2>
-                    <h2>•	Max speed 16 knots and cruising speed 12.5 knots</h2>
-                    <h2>•	Range 6150 NM @ 12.5 knots</h2>
-                    <h2>•	Accommodation for 19 crew</h2>
-                    <h2>•	Lloyd's class, LY3, MCA compliant
-
-                    </h2>
+                    <h1 class="wow fadeIn">Key features</h1>
+                    <h2 class="wow fadeIn" data-wow-delay="0.1s">Winner of the World Superyacht Award 2011 'Best Displacement Motor Yacht 60m - 84m'</h2>
+                    <h2 class="wow fadeIn" data-wow-delay="0.2s">Exterior & Interior Design by Craig Beale/Pure Detail</h2>
+                    <h2 class="wow fadeIn" data-wow-delay="0.3s">Accommodation for up to 20 guests in eight cabins (master suite, 4 guest King suites; 2 have additional single beds and Pullman, and 1 twin cabin with Pullman berth)</h2>
+                    <h2 class="wow fadeIn" data-wow-delay="0.4s">Twin Caterpillar 3516 HD, 2200hp engines</h2>
+                    <h2 class="wow fadeIn" data-wow-delay="0.5s">Max speed 16 knots and cruising speed 12.5 knots</h2>
+                    <h2 class="wow fadeIn" data-wow-delay="0.6s">Range 6150 NM @ 12.5 knots</h2>
+                    <h2 class="wow fadeIn" data-wow-delay="0.7s">Accommodation for 19 crew</h2>
+                    <h2 class="wow fadeIn" data-wow-delay="0.8s">Lloyd's class, LY3, MCA compliant</h2>
                 </div>
             </div>
         </section>
 
-        <section class="newsletter">
-            <h1>Sign up to our newsletter</h1>
-            <form>
-                <input type="email" placeholder="Enter your email address" id="email">
-                <input type="submit" value="" id="submit">
-            </form>
-        </section>
+            <!-- News Letter -->
+    <section class="newsletter wow pulse" data-wow-iteration="2">
+        <h1>Sign up to our newsletter</h1>
+        <form id="form">
+            <input type="email" placeholder="Enter your email address" id="email" required>
+            <input type="submit" value="" id="submit">
+        </form>
+    </section>
         <footer>
             <div id="left">
                 <a href="#">Terms of use</a>
                 <a href="#">Privacy policy</a>
                 <a href="#">Careers</a>
-                <a href="#">Sitemap</a>
+                <a href="../sitemap.html">Sitemap</a>
                 <div style="color: rgb(175, 175, 175);">© 2020</div>
             </div>
             <div id="right">
@@ -130,6 +169,22 @@
 
 
     </div>
-    
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/wow.js"></script>
+    <script>
+        new WOW().init()
+
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+        
+    </script>
 </body>
+
 </html>

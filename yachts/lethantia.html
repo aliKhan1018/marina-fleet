@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,13 +7,44 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/ship.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <script defer src="../js/main.js"></script>
+
+    <style>
+        .swiper-container {
+            height: 480px;
+            width: 100%;
+            margin-top: 20px;
+            float: left;
+        }
+
+        .swiper-slide {
+            overflow: hidden;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+            -webkit-align-items: center;
+            align-items: center;
+            width: 60%;
+        }
+
+        .swiper-slide img {
+            height: 100%;
+        }
+    </style>
 </head>
+
 <body>
     <div id="root">
-        <div class="navbar" id="nav">
+        <div class="navbar">
             <nav>
                 <a href="../index.html">
-                    <div id="logo"></div>
+                    <div id="logo"><img src="../imgs/logo_marina_fleet.png" alt=""></div>
                 </a>
                 <div class="nav-links">
                     <ul>
@@ -36,30 +68,36 @@
         </div>
 
         <section class="ship-data">
-            <div class="back-btn"></div>
-            <h1>Lethantia</h1>
-            <div class="imgs">
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
+            <a href="../yachts.html"><div class="back-btn wow fadeIn"><img src="../imgs/icons/icons8-back-24.png" alt=""></div></a>
+            <h1 class="wow fadeInRight">Lethantia</h1>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../imgs/yachts/lethantia/main.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../imgs/yachts/lethantia/webvb1630032.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../imgs/yachts/lethantia/webvb1630033.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../imgs/yachts/lethantia/webvb1630036.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../imgs/yachts/lethantia/webvb1630040.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../imgs/yachts/lethantia/webvb1630041.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../imgs/yachts/lethantia/webvb1630042.jpg" alt=""></div>
+                </div>
             </div>
             <div class="infos">
-                <div class="info">
+                <div class="info wow fadeInUp" data-wow-delay=".25s">
                     <p>Asking price</p>
                     <h1> EUR 8,250,000</h1>
                 </div>
                 <div class="divider"></div>
-                <div class="info">
+                <div class="info wow fadeInUp" data-wow-delay=".5s">
                     <p>Built</p>
                     <h1> 1994 (refitted 2019), Royal Huisman Shipyard, Netherlands</h1>
                 </div>
                 <div class="divider"></div>
-                <div class="info">
+                <div class="info wow fadeInUp" data-wow-delay=".75s">
                     <p>Length</p>
                     <h1>43.9m (144ft)</h1>
                 </div>
                 <div class="divider"></div>
-                <div class="info">
+                <div class="info wow fadeInUp" data-wow-delay="1s">
                     <p>Guests</p>
                     <h1> 6 in 3 cabins</h1>
                 </div>
@@ -67,67 +105,86 @@
         </section>
 
         <section class="ship-info">
-            <ul class="tabs">
+            <ul class="tabs wow fadeInLeft" data-wow-offset="50">
                 <li class="tab">Description</li>
-                <li class="tab">Gallery</li>
             </ul>
             <div class="text-container">
                 <div class="left">
-                    <h1>About Lethantia</h1>
-                    <h2>The 43.9m (144ft) ketch LETHANTIA was built in aluminium and delivered in 1994 by revered Dutch shipyard Royal Huisman. Naval architecture and exterior design are by Lunstroo Custom Design and interiors are by the celebrated British designer John Munford. A 2017 refit post purchase saw the yacht repainted with Awlgrip, her rigs serviced and painted. And further works carried out in 2019. Having been professionally operated, maintained and serviced since delivery, she presents in excellent condition.
+                    <h1 class="wow fadeIn">About Lethantia</h1>
+                    <h2 class="wow fadeInUp">The 43.9m (144ft) ketch LETHANTIA was built in aluminium and delivered in 1994 by revered Dutch
+                        shipyard Royal Huisman. Naval architecture and exterior design are by Lunstroo Custom Design and
+                        interiors are by the celebrated British designer John Munford. A 2017 refit post purchase saw
+                        the yacht repainted with Awlgrip, her rigs serviced and painted. And further works carried out
+                        in 2019. Having been professionally operated, maintained and serviced since delivery, she
+                        presents in excellent condition.
                         the celebrated 48m series to be built at the Viareggio shipyard, her steel hull and aluminium
                         superstructure were constructed to ABS classification and designed inside and out by the yard's
                         renowned in-house team.</h2>
-                    <p>A pleasing sheer arcs from her wineglass stern to her 4m bowsprit and there is plenty of versatile deck space to enjoy once at anchor. Cockpit seating for her six guests is shaded by a collapsible bimini.
+                    <p class="wow fadeIn">A pleasing sheer arcs from her wineglass stern to her 4m bowsprit and there is plenty of
+                        versatile deck space to enjoy once at anchor. Cockpit seating for her six guests is shaded by a
+                        collapsible bimini.
                     </p>
-                    <p>Steps lead down into the deckhouse where there is saloon dining to port and seating to starboard, an opening skylight to illuminate the cabinetry and views out onto the anchorage. From there steps lead forward into the main saloon where there is a forma dining area to port and a lounge area to starboard, cocooned in teak and cherry wood, again lit by a generous opening skylight.
+                    <p class="wow fadeIn">Steps lead down into the deckhouse where there is saloon dining to port and seating to starboard,
+                        an opening skylight to illuminate the cabinetry and views out onto the anchorage. From there
+                        steps lead forward into the main saloon where there is a forma dining area to port and a lounge
+                        area to starboard, cocooned in teak and cherry wood, again lit by a generous opening skylight.
+                    </p class="wow fadeIn">
+                    <p class="wow fadeIn">She accommodates six guests. The full beam owner's suite, reconfigured in 2017 to include a king
+                        size double berth, is aft, down steps from the deckhouse. It is en suite and two large
+                        decklights provide natural light. Forward of the main saloon are two double cabins, also en
+                        suite and each with a decklight. She also sleeps six crew in quarters forward with separate deck
+                        access.
                     </p>
-                    <p>She accommodates six guests. The full beam owner's suite, reconfigured in 2017 to include a king size double berth, is aft, down steps from the deckhouse. It is en suite and two large decklights provide natural light. Forward of the main saloon are two double cabins, also en suite and each with a decklight. She also sleeps six crew in quarters forward with separate deck access.
+                    <p class="wow fadeIn" >
+                        Two aluminium masts by Rondal carry 720sqm (7,750sqft) of sails, by North Sails and Hood and all
+                        sails are handled by modern hydraulic operated furlers, captive drum and reel winches so she is
+                        easily managed by a shorthanded crew. In calms a single 650hp MTU diesel engine gives her a top
+                        speed of 13 knots and a cruising speed of 10 knots.
                     </p>
-                    <p>
-                        Two aluminium masts by Rondal carry 720sqm (7,750sqft) of sails, by North Sails and Hood and all sails are handled by modern hydraulic operated furlers, captive drum and reel winches so she is easily managed by a shorthanded crew. In calms a single 650hp MTU diesel engine gives her a top speed of 13 knots and a cruising speed of 10 knots.
+                    <p class="wow fadeIn">
+                        This yacht is of exceptional quality throughout. Asking EUR 8,250,000 with EU VAT paid, she is
+                        lying in Palma where a virtual tour can be arranged.
                     </p>
-                    <p>
-                        This yacht is of exceptional quality throughout. Asking EUR 8,250,000 with EU VAT paid, she is lying in Palma where a virtual tour can be arranged.
-                    </p>
-                   
+                    <a style="color: gray; text-decoration: underline;" href="../docs-yachts/Lethantia.docx"
+                        download>Download as .docx</a>
                 </div>
                 <div class="right">
-                    <h1>Key features</h1>
-                    <h2>A modern classic schooner designed to be easily sailed</h2>
-                    <h2>Comfortable voluminous interior</h2>
-                    <h2>Classic John Munford interior design</h2>
-                    <h2>Classic John Munford interior design</h2>
-                    <h2>Fully redesigned master cabin
-
+                    <h1 class="wow fadeIn">Key features</h1>
+                    <h2 class="wow fadeIn" data-wow-delay="0.1s">A modern classic schooner designed to be easily sailed</h2>
+                    <h2 class="wow fadeIn" data-wow-delay="0.2s">Comfortable voluminous interior</h2>
+                    <h2 class="wow fadeIn" data-wow-delay="0.3s">Classic John Munford interior design</h2>
+                    <h2 class="wow fadeIn" data-wow-delay="0.4s">Classic John Munford interior design</h2>
+                    <h2 class="wow fadeIn" data-wow-delay="0.5s">Fully redesigned master cabin
                     </h2>
                 </div>
             </div>
         </section>
 
-        <section class="newsletter">
-            <h1>Sign up to our newsletter</h1>
-            <form>
-                <input type="email" placeholder="Enter your email address" id="email">
-                <input type="submit" value="" id="submit">
-            </form>
-        </section>
+            <!-- News Letter -->
+    <section class="newsletter wow pulse" data-wow-iteration="2">
+        <h1>Sign up to our newsletter</h1>
+        <form id="form">
+            <input type="email" placeholder="Enter your email address" id="email" required>
+            <input type="submit" value="" id="submit">
+        </form>
+    </section>
+
         <footer>
             <div id="left">
                 <a href="#">Terms of use</a>
                 <a href="#">Privacy policy</a>
                 <a href="#">Careers</a>
-                <a href="#">Sitemap</a>
+                <a href="../sitemap.html">Sitemap</a>
                 <div style="color: rgb(175, 175, 175);">© 2020</div>
             </div>
             <div id="right">
                 <a href="https://facebook.com" target="_blank"><img
-                        src="./imgs/icons/social-media/icons8-facebook-30.png" alt=""></a>
+                        src="../imgs/icons/social-media/icons8-facebook-30.png" alt=""></a>
                 <a href="https://instagram.com" target="_blank"><img
-                        src="./imgs/icons/social-media/icons8-instagram-30.png" alt=""></a>
+                        src="../imgs/icons/social-media/icons8-instagram-30.png" alt=""></a>
                 <a href="https://youtube.com" target="_blank"><img
-                        src="./imgs/icons/social-media/icons8-play-button-30.png" alt=""></a>
-                <a href="https://twitter.com" target="_blank"><img src="./imgs/icons/social-media/icons8-twitter-30.png"
+                        src="../imgs/icons/social-media/icons8-play-button-30.png" alt=""></a>
+                <a href="https://twitter.com" target="_blank"><img src="../imgs/icons/social-media/icons8-twitter-30.png"
                         alt=""></a>
             </div>
         </footer>
@@ -136,6 +193,22 @@
 
 
     </div>
-    
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/wow.js"></script>
+    <script>
+        new WOW().init()
+
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+        
+    </script>
 </body>
+
 </html>

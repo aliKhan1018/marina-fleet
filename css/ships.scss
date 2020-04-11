@@ -6,20 +6,17 @@
     width: 100%;
     height: 120px;
     @include flex-center();
-    h3{
-        color: white;
-        margin: 10px 0;
-        font-size: 1.5em;
-    }
-    select{
+    input[type=text]{
         border: none;
-        background-color: transparent;
+        background: none;
+        padding: 10px 0;
+        border-bottom: 1px solid white;
+        width: 300px;
         color: white;
-        padding: 5px 0;
-        font-size: 1em;
+        font-size: 1.2em;
         outline: none;
-        option{
-            color: black;
+        &::placeholder{
+            color: white;
         }
     }
 }
@@ -68,7 +65,7 @@
     }
 }
 
-.abc{
+.discover{
     width: 96%;
     height: 800px;
     margin: 0 auto;

@@ -1,36 +1,73 @@
 console.log('main.js connected')
 
+// Caching DOM
 const limit = 550
 const downBtns = document.getElementsByClassName('down')
 const submit_input = document.getElementById('submit')
 const email_input = document.getElementById('email')
+const form = document.getElementById('form')
+const feedback_form = document.getElementById('feedback-form')
+const thanksSubscription_div = document.getElementById('thanksSub')
+const contact_form = document.getElementById('contact-form')
+const form_div = document.getElementById('formDiv')
+const nav = document.getElementById("nav")
 
-// for (let i = 0; i < downBtns.length; i++) {
-//     downBtns[i].addEventListener('click', scrollDown)
-// }
 
-submit_input.addEventListener('click', function(){
-    let email = email_input.value
-    if(email === ''){
-        alert('Email is empty')
+// Newsletter subscription
+submit_input.addEventListener('click', function () {
+    if (isEmpty()) {
+        alert('Email is empty.')
+    }
+    else if (form.checkValidity()) {
+        alert('Thanks for subscribing!')
+    }
+    else if (!form.checkValidity()) {
+        alert('Email not valid.')
+    }
+    else {
+        alert('please check your email.')
     }
 })
 
 
-window.onscroll = function () {
-    console.log(window.scrollY)
-    if (document.body.scrollTop > limit || document.documentElement.scrollTop > limit) {
-        document.getElementById("nav").style.top = "0";
-    } else {
-        document.getElementById("nav").style.top = "-20vh";
+// Showing and hiding dynamic navbar
+if (nav) {
+    window.onscroll = function () {
+        console.log(window.scrollY)
+        if (document.body.scrollTop > limit || document.documentElement.scrollTop > limit)
+            nav.style.top = '0'
+        else
+            nav.style.top = '-20vh'
+
     }
 }
-    
-function scrollDown(multiplier){
-    window.scrollTo(0, 682 * multiplier)
+
+// Functions
+function isEmpty() {
+    let email = email_input.value
+    if (email === '') {
+        return true
+    }
+    return false
 }
 
+function scrollDown(y) {
+    window.scrollTo(0, y)
+}
 
+function feedback() {
+    if (feedback_form.checkValidity())
+        alert('Thanks for your feedback!')
+    else
+        alert('Please fill the form correctly')
+}
 
+function contactSubmission() {
+    if (contact_form.checkValidity())
+        alert('Form submitted successfully!\nWe will contact you as soon as possible.')
+    else
+        alert('Please fill the form correctly')
+
+}
 
 

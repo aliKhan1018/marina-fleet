@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us | Marina Fleet</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/animate.css">
 </head>
 
 <body>
     <div id="root">
-        <div class="navbar" id="nav">
+        <div class="navbar">
             <nav>
                 <a href="index.html">
-                    <div id="logo"></div>
+                    <div id="logo"><img src="./imgs/logo_marina_fleet.png" alt=""></div>
                 </a>
                 <div class="nav-links">
                     <ul>
@@ -34,16 +35,16 @@
                         <li class="nav-link"><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
+
             </nav>
         </div>
 
-        <section class="intro-sec">
+        <section class="intro-sec wow fadeIn">
             <img src="./imgs/diana-aishe-O8kzOwKP3Iw-unsplash.jpg" alt="">
-            <div class="box">
-                <h1>Your Queries.</h1>
-                <h2>Answered.</h2>
-                <h3>Contact us</h3>
+            <div class="box wow">
+                <h1 class="wow fadeInUp" data-wow-delay="1.75s">Your queries.</h1>
+                <h2 class="wow fadeInUp" data-wow-delay="2s">Answered.</h2>
+                <h3 class="wow fadeInUp" data-wow-offset="-1000" data-wow-delay="2s">Contact us</h3>
             </div>
         </section>
 
@@ -55,26 +56,30 @@
                     efficiently as possible.</p>
             </div>
             <div class="form">
-                <form action="">
+                <form id="contact-form">
                     <tr>
                         <h3>About you.</h3>
                     </tr>
                     <tr>
-                        <td><input type="text" class="form-name" name="" id="" placeholder="First Name"></td>
-                        <td><input type="text" class="form-name" name="" id="" placeholder="Last Name"></td>
+                        <td><input type="text" pattern="[a-zA-Z]{3,50}" class="form-name" placeholder="First Name"
+                                required></td>
+                        <td><input type="text" pattern="[a-zA-Z]{3,50}" class="form-name" placeholder="Last Name"
+                                required></td>
                     </tr>
                     <tr>
-                        <td><input type="email" name="" id="" placeholder="Enter your email"></td>
+                        <td><input type="email" placeholder="Enter your email" required></td>
                     </tr>
                     <tr>
-                        <td><input type="text" class="form-contact" name="" id="" placeholder="Business contact number">
+                        <td><input type="text" pattern="[0-9+]{4,20}" class="form-contact"
+                                placeholder="Business contact number">
                         </td>
                         <div class="gray-box">
                             <p>Please include the country code</p>
                         </div>
                     </tr>
                     <tr>
-                        <td><input type="text" name="" class="form-contact" id="" placeholder="Personal contact number">
+                        <td><input type="text" pattern="[0-9]{4,20}" class="form-contact"
+                                placeholder="Personal contact number" required>
                         </td>
                         <div class="gray-box">
                             <p>Please include the country code</p>
@@ -83,7 +88,7 @@
                     <!-- Country Select -->
                     <tr>
                         <td>
-                            <select>
+                            <select required>
                                 <option value="">Country</option>
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>
@@ -348,7 +353,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <select>
+                            <select required>
                                 <option value="">Preferred contact method</option>
                                 <option value="1">Any</option>
                                 <option value="2">Email</option>
@@ -362,9 +367,10 @@
                             <h3>Preferred language</h3>
                         </td>
                     </tr>
+                    <!-- Preferred Language -->
                     <tr>
                         <td>
-                            <select>
+                            <select required>
                                 <option value="">Preferred language</option>
                                 <option value="100000000">English</option>
                                 <option value="100000001">English (US)</option>
@@ -398,49 +404,33 @@
                         </td>
                     </tr>
                     <tr>
-                        <textarea name="" id="" cols="79" rows="6" placeholder="Message"></textarea>
+                        <textarea name="" id="" cols="79" rows="6" placeholder="Message" required></textarea>
                     </tr>
                     <tr>
-                        <td>
-                            <h3>What would you like emails about?</h3>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>If you would like to receive the latest news from Burgess by email, please tick the boxes
-                                below.
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p style="font-size: .75em; color: gray;">order to understand how we use and protect your
-                                personal information, please read our <a href="#">privacy policy</a>.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="Send"></td>
+                        <td><input type="submit" value="Send" onclick="contactSubmission()"></td>
                     </tr>
                 </form>
             </div>
         </section>
 
-
-
-
-        <section class="newsletter">
+        
+        <!-- News Letter -->
+        <section class="newsletter wow pulse" data-wow-iteration="2">
             <h1>Sign up to our newsletter</h1>
-            <form>
-                <input type="email" placeholder="Enter your email address" id="email">
+            <form id="form">
+                <input type="email" placeholder="Enter your email address" id="email" required>
                 <input type="submit" value="" id="submit">
             </form>
         </section>
+
+
+        <!-- Footer -->
         <footer>
             <div id="left">
                 <a href="#">Terms of use</a>
                 <a href="#">Privacy policy</a>
                 <a href="#">Careers</a>
-                <a href="#">Sitemap</a>
+                <a href="./sitemap.html">Sitemap</a>
                 <div style="color: rgb(175, 175, 175);">© 2020</div>
             </div>
             <div id="right">
@@ -455,7 +445,14 @@
             </div>
         </footer>
 
+
+
     </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

@@ -19,10 +19,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, a, p{
-    // font-family: 'Sen', sans-serif; 
     font-family: 'Montserrat', sans-serif;
-    // font-family: 'Spinnaker', sans-serif;
-    // font-family: 'Nunito Sans', sans-serif;
 }
 
 video{
@@ -50,9 +47,7 @@ video{
         width: 396px;
         background-color: $theme-color1;
         float: left;
-        // position: absolute;
-        // left: 50%;
-        // transform: translateX(-50%);
+        @include flex-center;
     }
     nav ul .nav-link{
         margin-left: 30px;
@@ -79,6 +74,7 @@ video{
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    background-image: linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,0));
     video{
         width: 100%;
     }
@@ -87,28 +83,64 @@ video{
         width: 25px;
         filter: invert(100%);
     }
-    .box{
-        @extend .box;
-        h1{
-            text-transform: uppercase;
-            font-size: 8em;
-            letter-spacing: 10px;
-            font-weight: 700;
+    header{
+        height: 80vh;
+        width: 100%;
+        .box{
+            @extend .box;
+            h1{
+                text-transform: uppercase;
+                font-size: 8em;
+                letter-spacing: 10px;
+                font-weight: 700;
+            }
+            h2{
+                font-size: 2em;
+                position: relative;
+                top: 50px;
+                letter-spacing: 2px;
+            }
+            .down-icon{
+                position: relative;
+                height: 24px;
+                width: 24px;
+                filter: invert(100%);
+                top: 70px;
+                animation: updown 1.5s ease-in-out infinite;
+            }
+            animation: box-expand 1.5s ease-in-out forwards;
         }
-        h2{
-            font-size: 2em;
-            position: relative;
-            top: 50px;
-            letter-spacing: 2px;
-        }
-        .down-icon{
-            position: relative;
-            height: 24px;
-            width: 24px;
-            filter: invert(100%);
-            top: 70px;
-        }
-        
+    }
+}
+
+@keyframes box-expand{
+    0%{
+        height: 0;
+        width: 0;
+    }
+    15%{
+        height: 0;
+        width: 0;
+    }
+    50%{
+        height: 100%;
+        width: 0;
+    }
+    100%{
+        height: 100%;
+        width: 90%;
+    }
+}
+
+@keyframes updown{
+    0%{
+        top: 70px;
+    }
+    50%{
+        top: 80px;
+    }
+    100%{
+        top: 70px;
     }
 }
 
@@ -238,17 +270,143 @@ nav
         }
     }
 }
-.charter-sec, .buy-sec, .sell-sec{
+.sec{
     height: 90vh;
     width: 100%;
     position: relative;
-
 }
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    h1{
+        font-size: 1.8em;
+        &::after{
+            content: '';
+            display: block;
+            height: 10px;
+            position: relative;
+            left: 50%;
+            top: 25px;
+            transform: translateX(-50%);
+            width: 35%;
+            background-color: $theme-color1;
+        }
+    }
+    p{
+        font-size: 1.1em;
+        text-align: center;
+    }
+    .container{
+        display: flex;
+        margin: 50px 0;
+        height: 500px;
+        width: 60%;
+        overflow: hidden;
+        img{
+            width: 40%;
+        }
+        .text{
+            width: 60%;
+            height: 100%;
+            @include flex-center();
+            flex-direction: column;
+            h1{
+                margin-bottom: 40px;
+                font-size: 3em;
+                &::after{
+                    top: 20px;
+                }
+            }
+            h3{
+                margin-top: 40px;
+                a{
+                    color: $theme-color2;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .down-btn{
+                position: relative;
+                height: 50px;
+                width: 50px;
+                animation: updown-about .5s ease-in-out infinite alternate-reverse;
+            }
+            @keyframes updown-about{
+                from{
+                    top: 15px;
+                }to{
+                    top:20px;
+                }
+            }
+        }
+    }
+}
+.feedback{
+    width: 100%;
+    .form{
+        width: 100%;
+        background-color: rgb(230, 230, 230);
+        form{
+            padding: 2em 1em;
+            margin: 0 auto;
+            width: 650px;
+            
+            input, select, textarea{
+                border: none;
+                outline: none;
+                padding: 15px;
+                font-size: 1em;
+                border-radius: 0px;
+                transition: .3s ease-in-out;
+            }
+            textarea{
+                resize: none;
+                margin-top: 10px;
+                width: 605px;
+                height: 180px;
+                font-size: 1.1em;
+            }
+            .form-name{
+                width: 300px;
+                margin: 10px 0;
+            }
+            input[type=email]{
+                width: 605px;
+                margin-bottom: 10px;
+            }
+            input[type=text]{
+                margin-top:20px;
+            }
+            input[type=submit]{
+                padding: 10px 20px;
+                background-color: $theme-color1;
+                color: white;
+                font-weight: bold;
+                font-size: 1.3em;
+                text-align: left;
+                width: 605px;
+                cursor: pointer;
+                margin: 20px 0;
+                &:hover{
+                    text-decoration: underline;
+                    background-color: $theme-color1-hover;
+                }
+            }
+            
+        }
+    }
+}
+
 @mixin ib {
     .info-box{
         height: 100%;
         width: 30%;
         float: left;
+        position: relative;
         h3{
             font-weight: 300;
             margin-left: 50px;
@@ -289,7 +447,7 @@ nav
     }
 }
 
-.charter-sec, .buy-sec, .sell-sec{
+.sec{
     @include ib();
     .more-icon{
         height: 20px;
@@ -300,8 +458,11 @@ nav
         filter: invert(0%);
     }
     .down-btn{
-        margin-top: 100px;
-        margin-left: 50px;
+        // margin-top: 100px;
+        // margin-left: 50px;
+        position: absolute;
+        left: 50px;
+        top:550px;
         height: 50px;
         width: 50px;
         @include flex-center();
@@ -310,6 +471,9 @@ nav
         transition: background-color .3s ease-in-out;
         &:hover{
             background-color: $theme-color1;
+            img{
+                filter: invert(100%);
+            }
         }
     }
     .section-img{
@@ -380,7 +544,7 @@ nav
             cursor: pointer;
             outline: none;
         }
-}
+    }
 }
 
 footer{
@@ -453,19 +617,46 @@ section[class*='-sec']{
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
-        padding: 2.5em 3em;
+        // padding: 2.5em 3em;
         height: 70vh;
+        width: 90%;
+        animation: box-expand2 1.5s ease-in-out forwards;
         h1{
             font-size: 6.5em;
+            margin-left: 50px;
+            margin-top: 30px;
         }
         h2{
             font-size: 3.5em;
             font-weight: 500;
+            margin-left: 50px;
+
         }
         h3{
             font-size: 2em;
-            margin-top: 25vh;
+            margin-top: 30vh;
+            margin-left: 50px;
+
         }
+    }
+}
+
+@keyframes box-expand2{
+    0%{
+        height: 0;
+        width: 0;
+    }
+    15%{
+        height: 0;
+        width: 0;
+    }
+    50%{
+        height: 70vh;
+        width: 0;
+    }
+    100%{
+        height: 70vh;
+        width: 90%;
     }
 }
 

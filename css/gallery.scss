@@ -1,0 +1,78 @@
+@import 'mixins', 'variables', 'fonts', 'fixed-navbar';
+
+.gallery-container{
+    padding: 2em 1em;
+    background-color: white;
+    
+    .line{
+        height: 10px;
+        width: 200px;
+        background-color: $theme-color1;
+        margin-left: 50px;
+    }
+    h1{
+        margin-left: 50px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        font-size: 2em;
+        color: $theme-color2;
+    }
+
+    .imgs{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .img{
+        width: 450px;
+        height: 300px;
+        background-color: gray;
+        margin: 20px 0;
+        position: relative;
+        z-index: 999;
+        img{
+            filter: grayscale(30%);
+            width: 450px;
+            height: 100%;
+            transition: .3s ease-in-out;
+            position: relative;
+            z-index: 2;
+        }
+        &:hover img{
+            // transform: scale(1.15);
+            filter: none;
+        }
+        &:hover .img-text{
+            top: -30px;
+        }
+        .img-text{
+            width: 450px;
+            height: 30px;
+            background-color: $theme-color2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: .3s ease-in-out;
+            color: white;
+            @include flex-center();
+            z-index: 1;
+        }
+    }
+
+}
+
+.extend{
+    animation: extend 1s forwards;
+}
+
+@keyframes extend{
+    from{
+        height: 10px;
+        width: 0;
+    }
+    to{
+        height: 10px;
+        width: 200px;
+    }
+}

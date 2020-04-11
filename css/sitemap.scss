@@ -1,0 +1,33 @@
+@import 'variables', 'mixins', 'fonts', 'fixed-navbar';
+
+.sitemap{
+    padding: 3em;
+    background-color: white;
+    width: 100%;
+    h1{
+        font-size: 2.5em;
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 30px;
+    }
+    ul{
+        height: 100%;
+        width: 100%;
+        li{
+            width: max-content;
+            padding: 10px 20px;
+            margin: 0 20px;
+            cursor: pointer;
+            list-style: circle;
+            a{
+                color: $theme-color2;
+                font-size: 1.2em;
+                text-decoration: underline;
+            }
+            ul{
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+

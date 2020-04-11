@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home | Marina Fleet</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/animate.css">
     <script defer src="./js/main.js"></script>
+
 </head>
 
 <body>
     <div id="root">
+        <!-- Dynamic Navbar (Hidden until the page is scrolled a certain amount.) -->
         <div class="d-navbar" id="nav">
             <nav>
                 <a href="index.html">
-                    <div id="logo"></div>
+                    <div id="logo"><img src="./imgs/logo_marina_fleet.png"></div>
                 </a>
                 <div class="nav-links">
                     <ul>
@@ -37,12 +40,15 @@
 
             </nav>
         </div>
+
+        <!-- Header Section -->
         <section class="header-sec" id="0">
+            <!-- Static Navbar -->
             <nav>
                 <div class="nav-links">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="ships.html">Ships</a>
+                    <ul class="wow fadeInDown">
+                        <li class="wow"><a href="index.html">Home</a></li>
+                        <li class="wow"><a href="ships.html">Ships</a>
                             <div class="dropdown">
                                 <ul>
                                     <li><a href="yachts.html">Yachts</a></li>
@@ -51,27 +57,43 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="sitemap.html">Sitemap</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li class="wow"><a href="gallery.html">Gallery</a></li>
+                        <li class="wow"><a href="sitemap.html">Sitemap</a></li>
+                        <li class="wow"><a href="about.html">About</a></li>
+                        <li class="wow"><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
+
             <header>
                 <video src="./vids/1477677945.mp4" id="vid" autoplay muted loop></video>
-                <div class="box">
-                    <h1>Marina Fleet</h1>
-                    <h2>Discover the difference.</h2>
-                    <div class="down-icon down" onclick="scrollDown(1)"><img
-                            src="./imgs/icons/icons8-expand-arrow-24.png" alt=""></div>
+                <div class="box wow">
+                    <h1 class="wow fadeIn" data-wow-delay="1.5s">Marina Fleet</h1>
+                    <h2 class="wow fadeIn" data-wow-delay="1.75s">Discover the difference.</h2>
+                    <div class="down-icon down" onclick="scrollDown(682*1)"><img
+                            src="./imgs/icons/icons8-expand-arrow-24.png">
+                    </div>
                 </div>
             </header>
         </section>
 
+        <!-- About Section -->
+        <section class="about wow fadeIn" data-wow-offset="150">
+            <div class="container">
+                <img src="./imgs/heidi-fin-mHC0qJ7l-ls-unsplash.jpg">
+                <div class="text">
+                    <h1>Mariana Fleet</h1>
+                    <h2>Your great escape, with us.</h2>
+                    <h3><a href="./about.html">Learn more about us</a></h3>
+                    <div class="down-btn down" onclick="scrollDown(1280)"><img
+                            src="./imgs/icons/icons8-expand-arrow-24.png"></div>
+                </div>
+            </div>
+        </section>
 
-        <section class="charter-sec" id="1">
-            <div class="info-box">
+        <!-- Yachts -->
+        <section class="sec wow fadeInRight" data-wow-offset="150" id="1">
+            <div class="info-box wow fadeIn" data-wow-offset="150" data-wow-delay="1s">
                 <h3>Buy a yacht</h3>
                 <h2>Your great escape. <br>
                     Tailored by Us.</h2>
@@ -81,88 +103,124 @@
 
                 <a href="./yachts.html">
                     <h4>Yachts</h4>
-                    <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20"
-                            alt="">
+                    <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20">
                     </div>
                 </a>
-                <div class="down-btn down" onclick="scrollDown(2)"><img src="./imgs/icons/icons8-expand-arrow-24.png"
-                        alt=""></div>
+                <div class="down-btn down" onclick="scrollDown(1963)"><img
+                        src="./imgs/icons/icons8-expand-arrow-24.png"></div>
             </div>
             <div class="section-img">
-                <img src="./imgs/nikldn-t-6GW8T6Jsc-unsplash.jpg" height="170%" width="100%" alt="">
-                <div class="box">
-                    <h1>Unforgettable.</h1>
+                <img src="./imgs/nikldn-t-6GW8T6Jsc-unsplash.jpg" height="170%" width="100%">
+                <div class="box wow fadeIn" data-wow-delay=".75s">
+                    <h1 class="wow fadeInRight" data-wow-delay=".25s">Unforgettable.</h1>
                 </div>
             </div>
         </section>
 
-        <section class="buy-sec" id="2">
+        <!-- Sailing Boats -->
+        <section class="sec wow fadeInLeft" data-wow-offset="150" id="2">
             <div class="section-img">
-                <img src="./imgs/armand-khoury-4qr3dUPTpOc-unsplash.jpg" height="240%" style="margin-top: -180px;" width="100%" alt="">
-                <div class="box">
-                    <h1>Escape.</h1>
+                <img src="./imgs/armand-khoury-4qr3dUPTpOc-unsplash.jpg" height="240%" style="margin-top: -180px;"
+                    width="100%">
+                <div class="box wow fadeIn" data-wow-delay=".75s">
+                    <h1 class="wow fadeInLeft" data-wow-delay=".25s">Escape.</h1>
                 </div>
             </div>
-            <div class="info-box">
+            <div class="info-box wow fadeIn" data-wow-offset="150" data-wow-delay="1s">
                 <h3>Buy a sailing boat</h3>
                 <h2>Your life. Spent wisely.</h2>
-                <p>From the global fleet of yachts offered for sale, we <br> hand-pick the best opportunities and share
+                <p>From the global fleet of sailing boats offered for sale, we <br> hand-pick the best opportunities and
+                    share
                     our expert <br> knowledge, so that you can make the best decisions.</p>
-
-                <h4>Buy a Yacht</h4>
-                <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20" alt="">
-                </div>
-                <div class="down-btn down" onclick="scrollDown(3)"><img src="./imgs/icons/icons8-expand-arrow-24.png"
-                        alt=""></div>
+                <a href="./sailing-boats.html">
+                    <h4>Sailing boats</h4>
+                    <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20">
+                    </div>
+                </a>
+                <div class="down-btn down" onclick="scrollDown(2645)"><img
+                        src="./imgs/icons/icons8-expand-arrow-24.png"></div>
             </div>
         </section>
 
-        <section class="sell-sec" id="3">
-            <div class="info-box">
-                <h3>Sell a yacht</h3>
-                <h2>Your perfect buyer. Our exclusive audience.</h2>
+        <!-- Fishing Boats -->
+        <section class="sec wow fadeInRight" data-wow-offset="150" id="3">
+            <div class="info-box wow fadeIn" data-wow-offset="150" data-wow-delay="1s">
+                <h3>Buy a fishing boat</h3>
+                <h2>Capturing perfection.</h2>
                 <p>Our market-leading intelligence paired with our unrivalled client database guarantees the smoothest
                     <br> of sales. Every time.</p>
 
-                <h4>Sell a Yacht</h4>
-                <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20" alt="">
-                </div>
-                <div class="down-btn down" onclick="scrollDown(4)"><img src="./imgs/icons/icons8-expand-arrow-24.png"
-                        alt=""></div>
+                <a href="./fishing-boats.html">
+                    <h4>Fishing boat</h4>
+                    <div class="more-icon"><img src="./imgs/icons/icons8-more-than-50.png" width="20" height="20">
+                    </div>
+                </a>
+                <div class="down-btn down" onclick="scrollDown((3326))"><img
+                        src="./imgs/icons/icons8-expand-arrow-24.png"></div>
             </div>
             <div class="section-img">
-                <img src="./imgs/eric-ward-R4lFk-d37ng-unsplash.jpg" height="110%" width="100%" alt="">
-                <div class="box">
-                    <h1>Success.</h1>
+                <img src="./imgs/thomas-millot-VdBFg55sVQw-unsplash.jpg" height="110%" width="100%">
+                <div class="box wow fadeIn" data-wow-delay=".75s">
+                    <h1 class="wow fadeInRight" data-wow-delay=".25s">Success.</h1>
                 </div>
             </div>
         </section>
 
-        <section class="newsletter">
+        <!-- Feedback -->
+        <section class="feedback">
+            <div class="form">
+                <form id="feedback-form">
+                    <h1>Give us your feedback</h1>
+                    <p><a style="color: gray; text-decoration: underline;" href="contact.html">or contact us</a></p>
+                    <tr>
+                        <td><input type="text" pattern="[a-zA-Z]{3,50}" class="form-name" placeholder="First Name"
+                                required></td>
+                        <td><input type="text" pattern="[a-zA-Z]{3,50}" class="form-name" placeholder="Last Name"
+                                required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" placeholder="Enter your email" required></td>
+                    </tr>
+                    <tr>
+                        <td><textarea placeholder="Message" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" onclick="feedback()" value="Send">
+                        </td>
+                    </tr>
+                </form>
+            </div>
+        </section>
+
+        <!-- News Letter -->
+        <section class="newsletter wow pulse" data-wow-iteration="2">
             <h1>Sign up to our newsletter</h1>
-            <form>
-                <input type="email" placeholder="Enter your email address" id="email">
+            <form id="form">
+                <input type="email" placeholder="Enter your email address" id="email" required>
                 <input type="submit" value="" id="submit">
             </form>
         </section>
 
+
+        <!-- Footer -->
         <footer>
             <div id="left">
                 <a href="#">Terms of use</a>
                 <a href="#">Privacy policy</a>
                 <a href="#">Careers</a>
-                <a href="#">Sitemap</a>
+                <a href="./sitemap.html">Sitemap</a>
                 <div style="color: rgb(175, 175, 175);">© 2020</div>
             </div>
             <div id="right">
                 <a href="https://facebook.com" target="_blank"><img
-                        src="./imgs/icons/social-media/icons8-facebook-30.png" alt=""></a>
+                        src="./imgs/icons/social-media/icons8-facebook-30.png"></a>
                 <a href="https://instagram.com" target="_blank"><img
-                        src="./imgs/icons/social-media/icons8-instagram-30.png" alt=""></a>
+                        src="./imgs/icons/social-media/icons8-instagram-30.png"></a>
                 <a href="https://youtube.com" target="_blank"><img
-                        src="./imgs/icons/social-media/icons8-play-button-30.png" alt=""></a>
-                <a href="https://twitter.com" target="_blank"><img src="./imgs/icons/social-media/icons8-twitter-30.png"
-                        alt=""></a>
+                        src="./imgs/icons/social-media/icons8-play-button-30.png"></a>
+                <a href="https://twitter.com" target="_blank"><img
+                        src="./imgs/icons/social-media/icons8-twitter-30.png"></a>
             </div>
         </footer>
 
@@ -170,6 +228,10 @@
 
     </div>
     <script src="./js/main.js"></script>
+    <script src="./js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

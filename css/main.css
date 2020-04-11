@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Spinnaker&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap");
-.box, .header-sec .box, .charter-sec .section-img .box, .buy-sec .section-img .box, .sell-sec .section-img .box {
+
+.box, .header-sec header .box, .sec .section-img .box {
   border: 3px solid white;
   position: relative;
   height: 80vh;
@@ -66,6 +64,15 @@ video {
   width: 396px;
   background-color: #18c0d6;
   float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .d-navbar nav ul .nav-link {
@@ -95,6 +102,8 @@ video {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
 }
 
 .header-sec video {
@@ -108,27 +117,101 @@ video {
           filter: invert(100%);
 }
 
-.header-sec .box h1, .header-sec .charter-sec .section-img .box h1, .charter-sec .section-img .header-sec .box h1, .header-sec .buy-sec .section-img .box h1, .buy-sec .section-img .header-sec .box h1, .header-sec .sell-sec .section-img .box h1, .sell-sec .section-img .header-sec .box h1 {
+.header-sec header {
+  height: 80vh;
+  width: 100%;
+}
+
+.header-sec header .box, .header-sec header .sec .section-img .box, .sec .section-img .header-sec header .box {
+  -webkit-animation: box-expand 1.5s ease-in-out forwards;
+          animation: box-expand 1.5s ease-in-out forwards;
+}
+
+.header-sec header .box h1, .header-sec header .sec .section-img .box h1, .sec .section-img .header-sec header .box h1 {
   text-transform: uppercase;
   font-size: 8em;
   letter-spacing: 10px;
   font-weight: 700;
 }
 
-.header-sec .box h2, .header-sec .charter-sec .section-img .box h2, .charter-sec .section-img .header-sec .box h2, .header-sec .buy-sec .section-img .box h2, .buy-sec .section-img .header-sec .box h2, .header-sec .sell-sec .section-img .box h2, .sell-sec .section-img .header-sec .box h2 {
+.header-sec header .box h2, .header-sec header .sec .section-img .box h2, .sec .section-img .header-sec header .box h2 {
   font-size: 2em;
   position: relative;
   top: 50px;
   letter-spacing: 2px;
 }
 
-.header-sec .box .down-icon {
+.header-sec header .box .down-icon {
   position: relative;
   height: 24px;
   width: 24px;
   -webkit-filter: invert(100%);
           filter: invert(100%);
   top: 70px;
+  -webkit-animation: updown 1.5s ease-in-out infinite;
+          animation: updown 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes box-expand {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  15% {
+    height: 0;
+    width: 0;
+  }
+  50% {
+    height: 100%;
+    width: 0;
+  }
+  100% {
+    height: 100%;
+    width: 90%;
+  }
+}
+
+@keyframes box-expand {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  15% {
+    height: 0;
+    width: 0;
+  }
+  50% {
+    height: 100%;
+    width: 0;
+  }
+  100% {
+    height: 100%;
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes updown {
+  0% {
+    top: 70px;
+  }
+  50% {
+    top: 80px;
+  }
+  100% {
+    top: 70px;
+  }
+}
+
+@keyframes updown {
+  0% {
+    top: 70px;
+  }
+  50% {
+    top: 80px;
+  }
+  100% {
+    top: 70px;
+  }
 }
 
 header {
@@ -320,32 +403,212 @@ nav .info ul li {
   color: white;
 }
 
-.charter-sec, .buy-sec, .sell-sec {
+.sec {
   height: 90vh;
   width: 100%;
   position: relative;
 }
 
-.charter-sec .info-box, .buy-sec .info-box, .sell-sec .info-box {
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #e6e6e6;
+}
+
+.about h1 {
+  font-size: 1.8em;
+}
+
+.about h1::after {
+  content: '';
+  display: block;
+  height: 10px;
+  position: relative;
+  left: 50%;
+  top: 25px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 35%;
+  background-color: #18c0d6;
+}
+
+.about p {
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.about .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 0;
+  height: 500px;
+  width: 60%;
+  overflow: hidden;
+}
+
+.about .container img {
+  width: 40%;
+}
+
+.about .container .text {
+  width: 60%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .container .text h1 {
+  margin-bottom: 40px;
+  font-size: 3em;
+}
+
+.about .container .text h1::after {
+  top: 20px;
+}
+
+.about .container .text h3 {
+  margin-top: 40px;
+}
+
+.about .container .text h3 a {
+  color: #111b24;
+}
+
+.about .container .text h3 a:hover {
+  text-decoration: underline;
+}
+
+.about .container .text .down-btn {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  animation: updown-about .5s ease-in-out infinite alternate-reverse;
+}
+
+@-webkit-keyframes updown-about {
+  from {
+    top: 15px;
+  }
+  to {
+    top: 20px;
+  }
+}
+
+@keyframes updown-about {
+  from {
+    top: 15px;
+  }
+  to {
+    top: 20px;
+  }
+}
+
+.feedback {
+  width: 100%;
+}
+
+.feedback .form {
+  width: 100%;
+  background-color: #e6e6e6;
+}
+
+.feedback .form form {
+  padding: 2em 1em;
+  margin: 0 auto;
+  width: 650px;
+}
+
+.feedback .form form input, .feedback .form form select, .feedback .form form textarea {
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-size: 1em;
+  border-radius: 0px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.feedback .form form textarea {
+  resize: none;
+  margin-top: 10px;
+  width: 605px;
+  height: 180px;
+  font-size: 1.1em;
+}
+
+.feedback .form form .form-name {
+  width: 300px;
+  margin: 10px 0;
+}
+
+.feedback .form form input[type=email] {
+  width: 605px;
+  margin-bottom: 10px;
+}
+
+.feedback .form form input[type=text] {
+  margin-top: 20px;
+}
+
+.feedback .form form input[type=submit] {
+  padding: 10px 20px;
+  background-color: #18c0d6;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: left;
+  width: 605px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.feedback .form form input[type=submit]:hover {
+  text-decoration: underline;
+  background-color: #16a8bb;
+}
+
+.sec .info-box {
   height: 100%;
   width: 30%;
   float: left;
+  position: relative;
 }
 
-.charter-sec .info-box h3, .buy-sec .info-box h3, .sell-sec .info-box h3 {
+.sec .info-box h3 {
   font-weight: 300;
   margin-left: 50px;
   margin-top: 130px;
 }
 
-.charter-sec .info-box h2, .buy-sec .info-box h2, .sell-sec .info-box h2 {
+.sec .info-box h2 {
   font-size: 35px;
   margin-left: 50px;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
 }
 
-.charter-sec .info-box h2::after, .buy-sec .info-box h2::after, .sell-sec .info-box h2::after {
+.sec .info-box h2::after {
   content: '';
   display: block;
   width: 30%;
@@ -354,7 +617,7 @@ nav .info ul li {
   margin-top: 20px;
 }
 
-.charter-sec .info-box p, .buy-sec .info-box p, .sell-sec .info-box p {
+.sec .info-box p {
   font-size: 16px;
   font-weight: 400;
   margin-top: 50px;
@@ -362,7 +625,7 @@ nav .info ul li {
   font-family: 'Playfair Display', serif;
 }
 
-.charter-sec .info-box h4, .buy-sec .info-box h4, .sell-sec .info-box h4 {
+.sec .info-box h4 {
   font-size: 18px;
   margin-left: 50px;
   margin-top: 50px;
@@ -371,11 +634,11 @@ nav .info ul li {
   float: left;
 }
 
-.charter-sec .info-box h4:hover, .buy-sec .info-box h4:hover, .sell-sec .info-box h4:hover {
+.sec .info-box h4:hover {
   color: #16a8bb;
 }
 
-.charter-sec .more-icon, .buy-sec .more-icon, .sell-sec .more-icon {
+.sec .more-icon {
   height: 20px;
   width: 20px;
   margin-top: 50px;
@@ -385,9 +648,10 @@ nav .info ul li {
           filter: invert(0%);
 }
 
-.charter-sec .down-btn, .buy-sec .down-btn, .sell-sec .down-btn {
-  margin-top: 100px;
-  margin-left: 50px;
+.sec .down-btn {
+  position: absolute;
+  left: 50px;
+  top: 550px;
   height: 50px;
   width: 50px;
   display: -webkit-box;
@@ -405,11 +669,16 @@ nav .info ul li {
   transition: background-color .3s ease-in-out;
 }
 
-.charter-sec .down-btn:hover, .buy-sec .down-btn:hover, .sell-sec .down-btn:hover {
+.sec .down-btn:hover {
   background-color: #18c0d6;
 }
 
-.charter-sec .section-img, .buy-sec .section-img, .sell-sec .section-img {
+.sec .down-btn:hover img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.sec .section-img {
   width: 70%;
   height: 100%;
   position: relative;
@@ -428,12 +697,12 @@ nav .info ul li {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
 
-.charter-sec .section-img img, .buy-sec .section-img img, .sell-sec .section-img img {
+.sec .section-img img {
   position: absolute;
   z-index: -1;
 }
 
-.charter-sec .section-img .box, .buy-sec .section-img .box, .sell-sec .section-img .box {
+.sec .section-img .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -446,7 +715,7 @@ nav .info ul li {
   padding: 3em;
 }
 
-.charter-sec .section-img .box h1, .buy-sec .section-img .box h1, .sell-sec .section-img .box h1 {
+.sec .section-img .box h1 {
   font-size: 6em;
 }
 
@@ -646,7 +915,7 @@ section[class*='-sec'] {
   width: 100%;
 }
 
-.intro-sec .box, .intro-sec .charter-sec .section-img .box, .charter-sec .section-img .intro-sec .box, .intro-sec .buy-sec .section-img .box, .buy-sec .section-img .intro-sec .box, .intro-sec .sell-sec .section-img .box, .sell-sec .section-img .intro-sec .box {
+.intro-sec .box, .intro-sec .header-sec header .box, .header-sec header .intro-sec .box, .intro-sec .sec .section-img .box, .sec .section-img .intro-sec .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -660,21 +929,65 @@ section[class*='-sec'] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2.5em 3em;
   height: 70vh;
+  width: 90%;
+  -webkit-animation: box-expand2 1.5s ease-in-out forwards;
+          animation: box-expand2 1.5s ease-in-out forwards;
 }
 
-.intro-sec .box h1, .intro-sec .charter-sec .section-img .box h1, .charter-sec .section-img .intro-sec .box h1, .intro-sec .buy-sec .section-img .box h1, .buy-sec .section-img .intro-sec .box h1, .intro-sec .sell-sec .section-img .box h1, .sell-sec .section-img .intro-sec .box h1 {
+.intro-sec .box h1, .intro-sec .sec .section-img .box h1, .sec .section-img .intro-sec .box h1 {
   font-size: 6.5em;
+  margin-left: 50px;
+  margin-top: 30px;
 }
 
-.intro-sec .box h2, .intro-sec .charter-sec .section-img .box h2, .charter-sec .section-img .intro-sec .box h2, .intro-sec .buy-sec .section-img .box h2, .buy-sec .section-img .intro-sec .box h2, .intro-sec .sell-sec .section-img .box h2, .sell-sec .section-img .intro-sec .box h2 {
+.intro-sec .box h2, .intro-sec .sec .section-img .box h2, .sec .section-img .intro-sec .box h2 {
   font-size: 3.5em;
   font-weight: 500;
+  margin-left: 50px;
 }
 
-.intro-sec .box h3, .intro-sec .charter-sec .section-img .box h3, .charter-sec .section-img .intro-sec .box h3, .intro-sec .buy-sec .section-img .box h3, .buy-sec .section-img .intro-sec .box h3, .intro-sec .sell-sec .section-img .box h3, .sell-sec .section-img .intro-sec .box h3 {
+.intro-sec .box h3, .intro-sec .sec .section-img .box h3, .sec .section-img .intro-sec .box h3 {
   font-size: 2em;
-  margin-top: 25vh;
+  margin-top: 30vh;
+  margin-left: 50px;
+}
+
+@-webkit-keyframes box-expand2 {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  15% {
+    height: 0;
+    width: 0;
+  }
+  50% {
+    height: 70vh;
+    width: 0;
+  }
+  100% {
+    height: 70vh;
+    width: 90%;
+  }
+}
+
+@keyframes box-expand2 {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  15% {
+    height: 0;
+    width: 0;
+  }
+  50% {
+    height: 70vh;
+    width: 0;
+  }
+  100% {
+    height: 70vh;
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
