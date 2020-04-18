@@ -282,7 +282,9 @@ nav
     width: 100%;
     background-color: rgb(230, 230, 230);
     h1{
-        font-size: 1.8em;
+        font-size: 2em;
+        letter-spacing: 3px;
+        color: $theme-color2;
         &::after{
             content: '';
             display: block;
@@ -294,6 +296,9 @@ nav
             width: 35%;
             background-color: $theme-color1;
         }
+    }
+    h2{
+        color: $theme-color2;
     }
     p{
         font-size: 1.1em;
@@ -354,7 +359,10 @@ nav
             padding: 2em 1em;
             margin: 0 auto;
             width: 650px;
-            
+            h1{
+                color: $theme-color2;
+
+            }
             input, select, textarea{
                 border: none;
                 outline: none;
@@ -417,6 +425,8 @@ nav
             margin-left: 50px;
             font-family: 'Playfair Display', serif;
             font-weight: 700;
+        color: $theme-color2;
+
             &::after{
                 content: '';
                 display: block;
@@ -496,6 +506,7 @@ nav
             padding: 3em;
             h1{
                 font-size: 6em;
+
             }
         }
     
@@ -618,6 +629,7 @@ section[class*='-sec']{
         align-items: flex-start;
         flex-direction: column;
         // padding: 2.5em 3em;
+        position: relative;
         height: 70vh;
         width: 90%;
         animation: box-expand2 1.5s ease-in-out forwards;
@@ -633,10 +645,11 @@ section[class*='-sec']{
 
         }
         h3{
+            position: absolute;
             font-size: 2em;
-            margin-top: 30vh;
+            // margin-top: 30vh;
             margin-left: 50px;
-
+            top: 85%;
         }
     }
 }

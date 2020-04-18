@@ -33,8 +33,7 @@ submit_input.addEventListener('click', function () {
 // Showing and hiding dynamic navbar
 if (nav) {
     window.onscroll = function () {
-        console.log(window.scrollY)
-        if (document.body.scrollTop > limit || document.documentElement.scrollTop > limit)
+        if (document.documentElement.scrollTop > limit)
             nav.style.top = '0'
         else
             nav.style.top = '-20vh'

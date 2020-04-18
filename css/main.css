@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap");
-
 .box, .header-sec header .box, .sec .section-img .box {
   border: 3px solid white;
   position: relative;
@@ -425,7 +424,9 @@ nav .info ul li {
 }
 
 .about h1 {
-  font-size: 1.8em;
+  font-size: 2em;
+  letter-spacing: 3px;
+  color: #111b24;
 }
 
 .about h1::after {
@@ -439,6 +440,10 @@ nav .info ul li {
           transform: translateX(-50%);
   width: 35%;
   background-color: #18c0d6;
+}
+
+.about h2 {
+  color: #111b24;
 }
 
 .about p {
@@ -539,6 +544,10 @@ nav .info ul li {
   width: 650px;
 }
 
+.feedback .form form h1 {
+  color: #111b24;
+}
+
 .feedback .form form input, .feedback .form form select, .feedback .form form textarea {
   border: none;
   outline: none;
@@ -606,6 +615,7 @@ nav .info ul li {
   margin-left: 50px;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
+  color: #111b24;
 }
 
 .sec .info-box h2::after {
@@ -929,6 +939,7 @@ section[class*='-sec'] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   height: 70vh;
   width: 90%;
   -webkit-animation: box-expand2 1.5s ease-in-out forwards;
@@ -948,9 +959,10 @@ section[class*='-sec'] {
 }
 
 .intro-sec .box h3, .intro-sec .sec .section-img .box h3, .sec .section-img .intro-sec .box h3 {
+  position: absolute;
   font-size: 2em;
-  margin-top: 30vh;
   margin-left: 50px;
+  top: 85%;
 }
 
 @-webkit-keyframes box-expand2 {
